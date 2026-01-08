@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, Children } from "react";
-import styles from "../css/customCarousel.module.css";
+import styles from "./css/customCarousel.module.css";
 
 function CustomCarousel({ children, gap = 10 }) {
   // ---------------------------------------------------------

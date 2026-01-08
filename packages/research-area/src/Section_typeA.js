@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./css/section_typeA.module.css";
-import CustomCarousel from "./components/CustomCarousel";
+import CustomCarousel from '@sean/custom-carousel';
 
 function Section_typeA({ data = [] }) {
   // 받은 data 전처리 (2개씩 그룹핑)

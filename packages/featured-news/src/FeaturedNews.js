@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./css/featurednews.module.css";
-import CustomCarousel from "./components/CustomCarousel";
+import CustomCarousel from '@sean/custom-carousel';
 
 function FeaturedNews() {
   return (
