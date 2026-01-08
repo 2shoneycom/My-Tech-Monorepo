@@ -3,6 +3,7 @@ import Header from '@sean/header-type-a';
 import HeroSlide from '@sean/hero-slide';
 import AreaSection from '@sean/research-area';
 import Fromtheblog from '@sean/from-the-blog';
+import FeaturedNews from '@sean/featured-news';
 
 import heroImg1 from '../assets/images/1764166800383.jpeg';
 
@@ -183,6 +184,7 @@ function Home() {
       <HeroSlide data={heroDataSample} />
       <AreaSection data={researchAreaDataSample} />
       <Fromtheblog data={fromtheblogDataSample} />
+      <FeaturedNews />
       <div className={styles.section2_area}></div>
       <div className={styles.section1_area}></div>
       <div className={styles.section2_area}></div>
