@@ -1,0 +1,8 @@
+{
+  "name": "my-tech-workspace",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

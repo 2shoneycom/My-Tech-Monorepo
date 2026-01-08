@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 1.8rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--primaryTextColor);
+}
+
+:root {
+  --primaryColor: #007cb6;
+  --secondaryColor: #e3661b;
+  --errorColor: #f44336;
+  --primaryTextColor: #232f3e;
+  --secondaryTextColor: #6c7778;
+  --headerBgColor: #ffffff;
+  --headerBorderColor: #EAEDED;
+  --headerMenuBgColor: #ffffff;
+  --headerMenuSubNavTextColor: #232f3e;
+  --aboveBgColor: #fafafa;
+  --belowBgColor: #fafafa;
+  --footerBgColor: #232f3e;
+  --footerTextColor: #ffffff;
+  --buttonBgColor: transparent;
+  --buttonTextColor: #007cb6;
+  --primaryHeadlineFont: Amazon Ember;
+  --secondaryHeadlineFont: Amazon Ember;
+  --tertiaryHeadlineFont: Ember Modern Display;
+  --bodyFont: Amazon Ember;
+  --contentWidth: 1240px;
+
+  --body-1: 1.8rem;
+  --button-1: 1.4rem;
+  --byline-1: 1.3rem;
+  --caption-1: 1.2rem;
+  --caption-2: 1.2rem;
+  --credit-1: 1rem;
+  --date-1: 1.3rem;
+  --description-1: 1.5rem;
+  --description-2: 1.5rem;
+  --description-3: 2rem;
+  --label-1: 1.2rem;
+  --label-2: 1.5rem;
+  --label-3: 1.5rem;
+  --label-4: 1.4rem;
+  --subtitle-1: 2rem;
+  --label-5: 1.3rem;
+  --title-1: 4rem;
+  --title-2: 3.2rem;
+  --title-4: 2rem;
+  --title-6: 1.6rem;
+  --title-5: 1.4rem;
+  --title-3: 2.4rem;
+  --title-8: 1.3rem;
+  --title-7: 1.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --title-1: 4.8rem;
+    --title-5: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --description-1: 2rem;
+    --title-1: 5.6rem;
+    --title-2: 4.8rem;
+    --title-4: 2.4rem;
+    --title-5: 2rem;
+    --title-3: 3rem;
+  }
+}

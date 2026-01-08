@@ -1,0 +1,132 @@
+.combinator_header_hamburger {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.outer_box {
+  width: 100%;
+  background: var(--headerBgColor);
+  border-bottom: 1px solid var(--headerBorderColor);
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  transition: top 0.3s ease-in-out;
+}
+
+.header-hidden {
+  top: calc(var(--header-height) * -1);
+}
+
+.outer_box .inner_box {
+  height: 100%;
+  font-size: var(--label-3);
+  font-weight: 400;
+}
+
+.inner_box .flex_container {
+  display: flex;
+  align-items: center;
+}
+
+.flex_container .hamburger_menu_trigger {
+  display: none;
+}
+
+.burger_menu_icon {
+  display: block;
+}
+
+.close_menu_icon {
+  display: none;
+}
+
+.hamburger_menu_trigger.open .burger_menu_icon {
+  display: none;
+}
+
+.hamburger_menu_trigger.open .close_menu_icon {
+  display: block;
+}
+
+.flex_container .header_logo {
+  margin: 1.8em 0 1.6em 0;
+  height: 1.9em;
+}
+
+.header_logo img {
+  height: 100%;
+}
+
+.flex_container .header_navigator {
+  display: none;
+}
+
+.header_navigator .header_navigator_item {
+  font-weight: 200;
+  letter-spacing: -0.05em;
+}
+
+.header_navigator_item:hover {
+  color: var(--primaryColor);
+}
+
+/* Responsive Web Design (width >= 1025px) */
+@media screen and (min-width: 1025px) {
+  .outer_box .inner_box {
+    margin: 0 3rem;
+  }
+
+  .flex_container .header_navigator {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2em;
+  }
+
+  .hamburger_outer_box {
+    display: none;
+  }
+}
+
+/* Responsive Web Design (769px <= width <= 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .outer_box .inner_box {
+    margin: 0 1.5rem;
+  }
+
+  .flex_container .hamburger_menu_trigger {
+    border: 0;
+    background: none;
+    cursor: pointer;
+    padding: 0 20px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Responsive Web Design (width <= 768px) */
+@media screen and (max-width: 768px) {
+  .inner_box .flex_container {
+    padding: 0 20px;
+  }
+
+  .flex_container .hamburger_menu_trigger {
+    border: 0;
+    background: none;
+    cursor: pointer;
+    padding: 0 20px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex_container .header_logo {
+    margin: 1.3em 0 1.1em 0;
+    height: 1.8em;
+  }
+}

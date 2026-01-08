@@ -1,0 +1,177 @@
+.hero_container {
+  --primaryTextColor: #fff;
+  color: var(--primaryTextColor);
+  position: relative;
+  width: 100%;
+  /* 핵심 코드: 16:9 비율 유지 */
+  aspect-ratio: 16 / 9;
+}
+
+/* [2단계] 태블릿 구간 (768px 이하) */
+@media screen and (max-width: 768px) {
+  .hero_container {
+    /* 비율 유지 기능을 끕니다 */
+    aspect-ratio: auto;
+    height: 100dvh;
+  }
+}
+
+/* [3단계] 모바일 구간 (576px 이하) */
+@media screen and (max-width: 576px) {
+  .hero_container {
+    height: auto;
+    /* 다시 16:9 비율을 적용합니다 */
+    aspect-ratio: 9 / 16;
+  }
+}
+
+.hero_layer1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-image: linear-gradient(to top right, rgb(65, 89, 122), rgb(137, 81, 169));
+}
+
+.hero_layer1 .bg_image {
+  position: absolute;
+  top: 6rem;
+  right: 6rem;
+  width: 50em;
+  border-radius: 2rem;
+}
+
+.hero_layer2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.hero_layer2 .description_area {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.description_area .description_content_area {
+  padding: 4em;
+  max-width: 700px;
+}
+
+.description_content_area .description_content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.description_content .title {
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--title-1);
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.description_content .details {
+  font-family: var(--bodyFont), Arial, Helvetica, sans-serif;
+  font-size: var(--description-1);
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.description_content .readmore {
+  background: var(--buttonTextColor);
+  border: 1px solid var(--buttonTextColor);
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--button-1);
+  font-weight: 700;
+  line-height: 110%;
+  padding: 10px 15px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.hero_layer2 .navigation_area {
+  width: 100%;
+  padding: 0 4em 3em 4em;
+}
+
+@media screen and (max-width: 1023px) {
+  .hero_layer2 .navigation_area {
+    padding: 0 0 0 4em;
+  }
+}
+
+.navigation_area .navigation_flex_box {
+  display: flex;
+  gap: 10px;
+}
+
+.navigation_flex_box .navigation_item_box {
+  flex: 1;
+  min-width: 0;
+}
+
+.navigation_slider {
+  width: 100%;
+  background-color: hsla(0, 0%, 95%, 0.5);
+  height: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress_bar {
+  height: 100%;
+  background-color: #fff;
+  /* 채워지는 색상 */
+  width: 0%;
+  /* 이 부분은 JS가 제어합니다 */
+  
+  /* transition: width 0.1s linear;
+  부드럽게 이어지도록 설정 */
+}
+
+.navigation_title {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1023px) {
+  .navigation_title {
+    display: none;
+  }
+}
+
+.play_pause {
+  display: grid;
+  margin-left: 30px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, .4);
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.play_pause svg {
+  fill: currentColor;
+  grid-column: 1;
+  grid-row: 1;
+  height: 16px;
+  width: 16px;
+}
