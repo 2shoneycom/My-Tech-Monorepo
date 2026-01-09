@@ -36,15 +36,30 @@
   }
 }
 
-.ResearchArea_header_wrapper {
+.featured_header_wrapper {
   margin-bottom: 30px;
+  max-width: 800px;
 }
 
-.ResearchArea_header_wrapper .ResearchArea_header {
+.featured_header_wrapper .featured_header {
+  display: block;
   font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
   font-size: var(--title-2);
   font-weight: 700;
   line-height: 110%;
+}
+
+@media only screen and (min-width: 768px) {
+  .featured_header_wrapper .featured_header {
+    display: contents;
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .featured_header_wrapper .featured_header {
+    margin-right: 0;
+  }
 }
 
 .flickity_group {

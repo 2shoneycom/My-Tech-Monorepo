@@ -1,0 +1,79 @@
+.PromoA .PromoA_media {
+  position: relative;
+  margin-bottom: 20px;
+}
+.PromoA_media a {
+  display: block;
+}
+
+.PromoA_media img {
+  width: 100%;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.PromoA .PromoA_content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.PromoA_content .PromoA_title {
+  order: 1;
+  margin: 0;
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--title-4);
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.PromoA_content .PromoA_details {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  order: 3;
+  color: var(--secondaryTextColor);
+  font-family: var(--secondaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--date-1);
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.PromoA_details .PromoA_duration:not(:first-child):before {
+  content: " | ";
+  display: inline-block;
+  margin-inline: 6px;
+}
+
+.PromoA_content .PromoA_description {
+  margin: 0;
+  order: 2;
+  font-family: var(--bodyFont), Arial, Helvetica, sans-serif;
+  font-size: var(--description-2);
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.PromoA_content .PromoA_category {
+  order: 4;
+  margin: 0;
+  color: var(--secondaryTextColor);
+  font-family: var(--secondaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--label-1);
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.PromoA_category .Link {
+  background: #e5f2f8;
+  border-radius: 5px;
+  color: var(--primaryTextColor);
+  display: inline-block;
+  font-weight: 400;
+  padding: 3px 7px;
+  text-transform: none;
+}

@@ -6,15 +6,15 @@ function FeaturedNews() {
   return (
     <div className={styles.top_container}>
       {/* 1. Title Area */}
-      <div className={styles.ResearchArea_header_wrapper}>
-        <h2 className={styles.ResearchArea_header}>Featured news</h2>
+      <div className={styles.featured_header_wrapper}>
+        <h2 className={styles.featured_header}>Featured news</h2>
       </div>
 
       {/* 2. Carousel Slider Area */}
       <CustomCarousel gap={10}>
-
-
-
+        <div className={styles.flickity_cell}>
+          
+        </div>
       </CustomCarousel>
     </div>
   );

@@ -1,6 +1,6 @@
 {
-  "name": "@sean/from-the-blog",
-  "version": "1.0.1",
+  "name": "@sean/promoA",
+  "version": "1.0.0",
   "main": "src/index.js",
   "peerDependencies": {
     "react": "^19.2.0",

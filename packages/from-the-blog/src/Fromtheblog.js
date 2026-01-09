@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./css/fromtheblog.module.css";
+import PromoA from '@sean/promoA';
 
 function Fromtheblog({ data = [] }) {
   return (
@@ -7,7 +8,7 @@ function Fromtheblog({ data = [] }) {
       <div className={styles.fromtheblog_heading}>
         <div className={styles.fromtheblog_heading_body}>
           <svg className={styles.fromtheblog_heading_background_image} width="481" height="416" viewBox="0 0 481 416" xmlns="http://www.w3.org/2000/svg">
-            <g stroke="#D5DBDB" stroke-width="1.5" fill="none" fill-rule="evenodd">
+            <g stroke="#D5DBDB" strokeWidth="1.5" fill="none" fillRule="evenodd">
               <path d="M240.966 104.38h119.646l59.823 103.537-59.823 103.536H240.966l-59.823-103.536z" />
               <path opacity=".6" d="M61.026.844h119.646l59.823 103.536-59.823 103.537H61.026L1.203 104.38z" />
               <path opacity=".603" d="M183.498.844h119.646l59.823 103.536-59.823 103.537H183.498L123.675 104.38z" />
@@ -29,45 +30,13 @@ function Fromtheblog({ data = [] }) {
       <div className={styles.fromtheblog_items_wrapper}>
         <ul className={styles.fromtheblog_items}>
           {data.map((item, index) => (
-            <li className={styles.fromtheblog_items_item}>
-              <div className={styles.PromoA}>
-                <div className={styles.PromoA_media}>
-                  <Link className={styles.Link} to={`${item.link}`}>
-                    <picture>
-                      <img className="Image" data-image-size="promoMedium" alt={`${item.title} + _image`} src={item.media_source} />
-                    </picture>
-                  </Link>
-                </div>
-                <div className={styles.PromoA_content}>
-                  <div className={styles.PromoA_title}>
-                    <Link className={styles.Link} to={`${item.link}`}>
-                      {item.title}
-                    </Link>
-                  </div>
-                  <div className={styles.PromoA_details}>
-                    <div className={styles.PromoA_date}>
-                      {item.date}
-                    </div>
-                    <div className={styles.PromoA_duration}>
-                      {/* ::before */}
-                      {item.duration}
-                    </div>
-                  </div>
-                  {/* 첫번째 아이템만 상세 설명 표시 */}
-                  { 
-                    index == 0 ? 
-                    <div className={styles.PromoA_description}>
-                      {item.description}
-                    </div>:
-                    null
-                  }
-                  <div className={styles.PromoA_category}>
-                    <Link className={styles.Link} to={`${item.category}`}>
-                      {item.category}
-                    </Link>
-                  </div>
-                </div>
-              </div>
+            <li className={styles.fromtheblog_items_item} key={index}>
+              <PromoA 
+                item={item} 
+                descciptOn={index === 0} 
+                mediaClassName={styles.blogMediaOverride}
+                titleClassName={styles.blogTitleOverride}
+              />
             </li>
           ))}
         </ul>
