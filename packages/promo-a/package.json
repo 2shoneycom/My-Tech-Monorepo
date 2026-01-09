@@ -1,5 +1,5 @@
 {
-  "name": "@sean/promoA",
+  "name": "@sean/promo-a",
   "version": "1.0.0",
   "main": "src/index.js",
   "peerDependencies": {

@@ -5,7 +5,7 @@
 }
 
 .carousel_slider .flickity_viewport {
-  height: 166px;
+  /* height: 166px; */
   cursor: grab;
   overflow: hidden;
   position: relative;

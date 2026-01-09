@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./css/fromtheblog.module.css";
-import PromoA from '@sean/promoA';
+import PromoA from '@sean/promo-a';
 
 function Fromtheblog({ data = [] }) {
   return (

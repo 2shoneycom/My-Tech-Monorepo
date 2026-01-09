@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
 import styles from "./css/featurednews.module.css";
 import CustomCarousel from '@sean/custom-carousel';
+import PromoA from '@sean/promo-a';
 
-function FeaturedNews() {
+function FeaturedNews({ data = [] }) {
   return (
     <div className={styles.top_container}>
       {/* 1. Title Area */}
@@ -11,10 +11,16 @@ function FeaturedNews() {
       </div>
 
       {/* 2. Carousel Slider Area */}
-      <CustomCarousel gap={10}>
-        <div className={styles.flickity_cell}>
-          
-        </div>
+      <CustomCarousel gap={20}>
+        {data.map((item, index) => (
+          <div className={styles.flickity_cell} key={index}>
+            <PromoA 
+             item={item}
+             detailsOn={false}
+             categoryOn={false}
+            />
+          </div>
+        ))}
       </CustomCarousel>
     </div>
   );
