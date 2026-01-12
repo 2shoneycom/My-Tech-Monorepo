@@ -9,6 +9,7 @@ function CustomCarousel({ children, gap = 10 }) {
   const totalItems = Children.count(children); // 자식 요소(슬라이드 아이템) 개수 세기
   const slideCount = Math.ceil(totalItems / itemsPerSlide);
 
+  // Item Per Slide도 사용자마다 달라야함, 근데 규칙이 있는건가 그냥 지정해야하는건가
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;  // 현재 브라우저의 너비

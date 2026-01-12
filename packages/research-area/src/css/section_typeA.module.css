@@ -97,8 +97,6 @@
   justify-content: center;
 }
 
-.ResearchAreaCard .ResearchAreaCard_content {}
-
 .ResearchAreaCard_content .ResearchAreaCard_title {
   font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
   line-height: 110%;

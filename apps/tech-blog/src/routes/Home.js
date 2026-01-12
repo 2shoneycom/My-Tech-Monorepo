@@ -4,6 +4,7 @@ import HeroSlide from '@sean/hero-slide';
 import AreaSection from '@sean/research-area';
 import Fromtheblog from '@sean/from-the-blog';
 import FeaturedNews from '@sean/featured-news';
+import Publications from '@sean/section-publications';
 
 import heroImg1 from '../assets/images/1764166800383.jpeg';
 
@@ -218,6 +219,88 @@ const featuredNewsDataSample = [
     link: "blog/4",
   },
 ];
+const PublicationsDataSample = [
+  {
+    id: 1,
+    title: "CausalFusion: Integrating LLMs and graph falsification for causal discovery",
+    description: "Causal discovery is central to enable causal models for tasks such as effect estimation, counterfactual reasoning, and root cause attribution. Yet existing approaches face trade-offs: purely statistical methods (e.g., PC, LiNGAM) often return structures that overlook domain knowledge, while expert-designed DAGs are difficult to scale and",
+    link: "blog/1",
+    author: "Sean Lee",
+    journal: "AAAI 2026",
+  },
+  {
+    id: 2,
+    title: "Beyond grey-box assumptions: Uncertainty-guided example selection for black-box language models",
+    description: "In-context learning (ICL) with Large Language Models has been historically effective, but performance depends heavily on demonstration quality while annotation budgets remain constrained. Existing uncertainty-based selection methods like Cover-ICL achieve strong performance through logit-based uncertainty estimation, but most",
+    link: "blog/2",
+    author: "Sean Lee",
+    journal: "AAAI 2026",
+  },
+  {
+    id: 3,
+    title: "Temporal-consistent video restoration with pre-trained diffusion models",
+    description: "Video restoration (VR) aims to recover high-quality videos from degraded ones. Although recent zero-shot VR methods using pre-trained diffusion models (DMs) show good promise, they suffer from approximation errors during reverse diffusion and insufficient temporal consistency. Moreover, dealing with 3D video data, VR is inherently",
+    link: "blog/3",
+    author: "Sean Lee",
+    journal: "AAAI 2026",
+  },
+  {
+    id: 4,
+    title: "Domain-specific LLM adaptation: Bridging personalization and efficiency through synthetic data and optimization",
+    description: "Large Language Models (LLMs) have demonstrated exceptional capabilities but face two critical deployment challenges: high computational costs and scarcity of personalized domain training data. We address these dual challenges through a comprehensive framework that combines synthetic data generation with inference optimization",
+    link: "blog/4",
+    author: "Sean Lee",
+    journal: "AAAI 2026",
+  },
+  {
+    id: 5,
+    title: "Neural codec language models have revolutionized speech synthesis but face significant challenges when adapted to music generation, particularly in achieving precise timbre control while preserving melodic content. We introduce Neural Code Language Model for Controllable Timbre Transfer (NCLMCTT), a novel architecture that",
+    description: "Large Language Models (LLMs) have demonstrated exceptional capabilities but face two critical deployment challenges: high computational costs and scarcity of personalized domain training data. We address these dual challenges through a comprehensive framework that combines synthetic data generation with inference optimization",
+    link: "blog/5",
+    author: "Sean Lee",
+    journal: "AAAI 2026",
+  },
+  {
+    id: 6,
+    title: "CausalFusion: Integrating LLMs and graph falsification for causal discovery",
+    description: "Causal discovery is central to enable causal models for tasks such as effect estimation, counterfactual reasoning, and root cause attribution. Yet existing approaches face trade-offs: purely statistical methods (e.g., PC, LiNGAM) often return structures that overlook domain knowledge, while expert-designed DAGs are difficult to scale and",
+    link: "blog/6",
+    author: "Sean Lee",
+    journal: "AAAI 2026",
+  },
+  {
+    id: 7,
+    title: "Beyond grey-box assumptions: Uncertainty-guided example selection for black-box language models",
+    description: "In-context learning (ICL) with Large Language Models has been historically effective, but performance depends heavily on demonstration quality while annotation budgets remain constrained. Existing uncertainty-based selection methods like Cover-ICL achieve strong performance through logit-based uncertainty estimation, but most",
+    link: "blog/7",
+    author: "Sean Lee",
+    journal: "AAAI 2026",
+  },
+  {
+    id: 8,
+    title: "Temporal-consistent video restoration with pre-trained diffusion models",
+    description: "Video restoration (VR) aims to recover high-quality videos from degraded ones. Although recent zero-shot VR methods using pre-trained diffusion models (DMs) show good promise, they suffer from approximation errors during reverse diffusion and insufficient temporal consistency. Moreover, dealing with 3D video data, VR is inherently",
+    link: "blog/8",
+    author: "Sean Lee",
+    journal: "AAAI 2026",
+  },
+  {
+    id: 9,
+    title: "Domain-specific LLM adaptation: Bridging personalization and efficiency through synthetic data and optimization",
+    description: "Large Language Models (LLMs) have demonstrated exceptional capabilities but face two critical deployment challenges: high computational costs and scarcity of personalized domain training data. We address these dual challenges through a comprehensive framework that combines synthetic data generation with inference optimization",
+    link: "blog/9",
+    author: "Sean Lee",
+    journal: "AAAI 2026",
+  },
+  {
+    id: 10,
+    title: "Neural codec language models have revolutionized speech synthesis but face significant challenges when adapted to music generation, particularly in achieving precise timbre control while preserving melodic content. We introduce Neural Code Language Model for Controllable Timbre Transfer (NCLMCTT), a novel architecture that",
+    description: "Large Language Models (LLMs) have demonstrated exceptional capabilities but face two critical deployment challenges: high computational costs and scarcity of personalized domain training data. We address these dual challenges through a comprehensive framework that combines synthetic data generation with inference optimization",
+    link: "blog/10",
+    author: "Sean Lee",
+    journal: "AAAI 2026",
+  },
+]
 
 function Home() {
   return (
@@ -227,9 +310,7 @@ function Home() {
       <AreaSection data={researchAreaDataSample} />
       <Fromtheblog data={fromtheblogDataSample} />
       <FeaturedNews data={featuredNewsDataSample} />
-      <div className={styles.section2_area}></div>
-      <div className={styles.section1_area}></div>
-      <div className={styles.section2_area}></div>
+      <Publications data={PublicationsDataSample} />
       <div className={styles.footer_area}></div>
     </div>
   );

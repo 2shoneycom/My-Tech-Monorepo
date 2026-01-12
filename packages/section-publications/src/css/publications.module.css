@@ -1,0 +1,97 @@
+.top_contianer {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  border-top: 1px solid #eaeded;
+}
+
+@media only screen and (min-width: 768px) {
+  .top_contianer {
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .top_contianer {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+}
+
+@media only screen and (min-width: 1340px) {
+  .top_contianer {
+    max-width: var(--contentWidth);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.header_wrapper {
+  max-width: 800px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header_wrapper {
+    margin-right: 49px;
+    max-width: 30%;
+    min-width: 30%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header_wrapper {
+    margin-right: 52px;
+    max-width: 280px;
+    min-width: 280px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .header_wrapper {
+    margin-right: 100px;
+    max-width: 26.3%;
+    min-width: 26.3%;
+  }
+}
+
+.header_wrapper .header {
+  display: block;
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--title-2);
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.header_wrapper .header_button {
+  display: inline-block;
+  appearance: none;
+  background: #fff;
+  border: 1px solid var(--buttonTextColor);
+  border-radius: 0;
+  color: var(--buttonTextColor);
+  cursor: pointer;
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--button-1);
+  font-weight: 700;
+  line-height: 110%;
+  padding: 10px 15px;
+  text-align: center;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+@media only screen and (min-width: 768px) {
+  .header_wrapper .header_button {
+    margin: 20px 0 0;
+  }
+}
+
+.body {
+  /* todo: 여기부터 css 작업 */
+}
