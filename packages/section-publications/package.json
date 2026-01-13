@@ -1,6 +1,6 @@
 {
   "name": "@sean/section-publications",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "src/index.js",
   "peerDependencies": {
     "react": "^19.2.0",

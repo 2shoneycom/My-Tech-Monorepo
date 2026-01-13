@@ -92,6 +92,142 @@
   }
 }
 
-.body {
-  /* todo: 여기부터 css 작업 */
+.body a:hover {
+  color: var(--secondaryColor);
+}
+
+@media only screen and (min-width: 768px) {
+  .body {
+    width: 70%;
+  }
+}
+
+.body .body_items {
+  margin: 0;
+  padding: 30px 0 0;
+  list-style: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .body .body_items {
+    padding: 0;
+  }
+}
+
+.body .body_items_item {
+  margin: 0;
+  padding: 0;
+}
+
+.body .body_items_item:nth-child(n+2) {
+  border-top: 1px solid #aab7b8;
+  margin-top: 30px;
+  padding-top: 30px;
+}
+
+.PromoF .PromoF_title {
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--title-4);
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.PromoF a {
+  color: inherit;
+}
+
+.PromoF .PromoF_details {
+  margin-top: 10px;
+  color: var(--secondaryTextColor);
+  font-family: var(--secondaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--date-1);
+  font-weight: 400;
+  line-height: 120%;
+}
+
+@media only screen and (min-width: 768px) {
+  .PromoF_details>* {
+    display: inline;
+  }
+
+  .PromoF_details> :not(:last-child)::after {
+    content: " | ";
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}
+
+.PromoF_details .PromoF_authors {
+  white-space: normal;
+}
+
+.PromoF_authors a {
+  white-space: nowrap;
+}
+
+.PromoF_details .PromoF_journal {
+  white-space: normal;
+}
+
+.PromoF .PromoF_content {
+  display: flex;
+  margin-top: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .PromoF_content .PromoF_body {
+    flex-grow: 1;
+  }
+}
+
+.PromoF_body .PromoF_description {
+  font-family: var(--bodyFont), Arial, Helvetica, sans-serif;
+  font-size: var(--description-2);
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.PromoF_description a {
+  text-decoration: none !important;
+  color: var(--primaryColor);
+}
+
+.PromoF_body .PromoF_category {
+  margin-top: 10px;
+  color: var(--secondaryTextColor);
+  font-family: var(--secondaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--label-1);
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.PromoF_category .Link {
+  background: #e5f2f8;
+  border-radius: 5px;
+  color: var(--primaryTextColor) !important;
+  display: inline-block;
+  font-weight: 400;
+  padding: 3px 7px;
+  text-transform: none;
+}
+
+.body .nextPage {
+  margin-top: 30px;
+}
+
+.nextPage a {
+  border-color: #aab7b8;
+  border-style: solid;
+  border-width: 1px 0;
+  display: block;
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--button-1);
+  font-weight: 700;
+  line-height: 2;
+  overflow-anchor: none;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  color: var(--primaryColor);
+  text-decoration: none;
 }
