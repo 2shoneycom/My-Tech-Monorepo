@@ -24,6 +24,10 @@ a {
   color: var(--primaryTextColor);
 }
 
+ol, ul {
+  list-style-type: none;
+}
+
 :root {
   --primaryColor: #007cb6;
   --secondaryColor: #e3661b;
