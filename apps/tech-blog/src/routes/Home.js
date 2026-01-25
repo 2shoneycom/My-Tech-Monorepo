@@ -5,7 +5,7 @@ import AreaSection from '@sean/research-area';
 import Fromtheblog from '@sean/from-the-blog';
 import FeaturedNews from '@sean/featured-news';
 import Publications from '@sean/section-publications';
-import Footer_typeA from '@sean/footer-type-a';
+import Footer from '@sean/footer-type-a';
 
 import heroImg1 from '../assets/images/1764166800383.jpeg';
 
@@ -332,7 +332,7 @@ function Home() {
       <Fromtheblog data={fromtheblogDataSample} />
       <FeaturedNews data={featuredNewsDataSample} />
       <Publications data={PublicationsDataSample} />
-      <Footer_typeA />
+      <Footer />
     </div>
   );
 }

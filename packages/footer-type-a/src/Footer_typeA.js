@@ -20,8 +20,8 @@ function Footer_typeA() {
             <div className={styles.footer_navigation}>
               <nav className={styles.FooterNavigation}>
                 <ul className={styles.FooterNavigation_items}>
-                  {footerMenuItems.map((item) =>
-                    <li className={styles.FooterNavigation_items_item}>
+                  {footerMenuItems.map((item, index) =>
+                    <li className={styles.FooterNavigation_items_item} key={index}>
                       <div className={styles.NavigationItem}>
                         <div className={styles.NavigationItem_text}>
                           <Link className={styles.NavigationItem_text_link} to="/">{item}</Link>
@@ -40,7 +40,7 @@ function Footer_typeA() {
                   <div className={styles.PromoNewsletter_media}>
                     {/* ::before */}
                     <picture>
-                      <img class="Image" data-image-size="hexagonXSmall" alt="View from space of a connected network around planet Earth representing the Internet of Things." width="70" height="61" src="https://assets.amazon.science/dims4/default/edd567d/2147483647/strip/true/crop/1465x1277+227+0/resize/70x61!/quality/90/?url=http%3A%2F%2Famazon-topics-brightspot.s3.amazonaws.com%2Fscience%2F20%2Fc4%2Fc36de9f643dab18e2f27ea071590%2Famazon-science-newsletter-project-kuiper.jpg"></img>
+                      <img className={styles.Image} data-image-size="hexagonXSmall" alt="View from space of a connected network around planet Earth representing the Internet of Things." width="70" height="61" src="https://assets.amazon.science/dims4/default/edd567d/2147483647/strip/true/crop/1465x1277+227+0/resize/70x61!/quality/90/?url=http%3A%2F%2Famazon-topics-brightspot.s3.amazonaws.com%2Fscience%2F20%2Fc4%2Fc36de9f643dab18e2f27ea071590%2Famazon-science-newsletter-project-kuiper.jpg"></img>
                     </picture>
                   </div>
                   <div className={styles.PromoNewsletter_body}>
@@ -81,7 +81,7 @@ function Footer_typeA() {
                   <Link className={styles.SocialLink} to="/" target="_blank">
                     <svg id="mono-icon-youtube" viewBox="0 0 512 512">
                       <g>
-                        <path fill-rule="evenodd" d="M508.6,148.8c0-45-33.1-81.2-74-81.2C379.2,65,322.7,64,265,64c-3,0-6,0-9,0s-6,0-9,0c-57.6,0-114.2,1-169.6,3.6
+                        <path fillRule="evenodd" d="M508.6,148.8c0-45-33.1-81.2-74-81.2C379.2,65,322.7,64,265,64c-3,0-6,0-9,0s-6,0-9,0c-57.6,0-114.2,1-169.6,3.6
                 c-40.8,0-73.9,36.4-73.9,81.4C1,184.6-0.1,220.2,0,255.8C-0.1,291.4,1,327,3.4,362.7c0,45,33.1,81.5,73.9,81.5
                 c58.2,2.7,117.9,3.9,178.6,3.8c60.8,0.2,120.3-1,178.6-3.8c40.9,0,74-36.5,74-81.5c2.4-35.7,3.5-71.3,3.4-107
                 C512.1,220.1,511,184.5,508.6,148.8z M207,353.9V157.4l145,98.2L207,353.9z"></path>
@@ -93,7 +93,7 @@ function Footer_typeA() {
                 <li className={styles.SocialBar_items_item}>
                   <Link className={styles.SocialLink} to="/" target="_blank">
                     <svg id="mono-icon-linkedin" viewBox="0 0 16 17">
-                      <g fill-rule="evenodd">
+                      <g fillRule="evenodd">
                         <path d="M3.734 16.125H.464V5.613h3.27zM2.117 4.172c-.515 0-.96-.188-1.336-.563A1.825 1.825 0 0 1 .22 2.273c0-.515.187-.96.562-1.335.375-.375.82-.563 1.336-.563.516 0 .961.188 1.336.563.375.375.563.82.563 1.335 0 .516-.188.961-.563 1.336-.375.375-.82.563-1.336.563zM15.969 16.125h-3.27v-5.133c0-.844-.07-1.453-.21-1.828-.259-.633-.762-.95-1.512-.95s-1.278.282-1.582.845c-.235.421-.352 1.043-.352 1.863v5.203H5.809V5.613h3.128v1.442h.036c.234-.469.609-.856 1.125-1.16.562-.375 1.218-.563 1.968-.563 1.524 0 2.59.48 3.2 1.441.468.774.703 1.97.703 3.586v5.766z"></path>
                       </g>
                     </svg>
