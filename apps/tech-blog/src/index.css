@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-repeat: no-repeat;
 }
 
 html {
@@ -24,7 +25,8 @@ a {
   color: var(--primaryTextColor);
 }
 
-ol, ul {
+ol,
+ul {
   list-style-type: none;
 }
 

@@ -1,0 +1,137 @@
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.HeroA {
+  position: relative;
+}
+
+.HeroA_backgroundMedia {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #f7f7f7;
+  z-index: -1;
+}
+
+.HeroA_backgroundMedia::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--primaryTextColor);
+  opacity: .55;
+}
+
+.HeroA_backgroundMedia img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+  aspect-ratio: auto 1440 / 320;
+}
+
+.HeroA_body {
+  min-height: 320px;
+  position: relative;
+  margin-left: 50px;
+  margin-right: 50px;
+  display: flex;
+  align-items: flex-start;
+}
+
+@media only screen and (min-width: 768px) {
+  .HeroA_body {
+    padding-right: 188px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .HeroA_body {
+    min-height: 360px;
+    padding-right: 324px;
+  }
+}
+
+@media only screen and (min-width: 1340px) {
+  .HeroA_body {
+    max-width: var(--contentWidth);
+    min-height: 384px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 440px;
+  }
+}
+
+.HeroA_background_image {
+  width: 232px;
+  height: 201px;
+  position: absolute;
+  top: -54px;
+  right: -80px;
+  z-index: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .HeroA_background_image {
+    width: 453px;
+    height: 392px;
+    top: unset;
+    bottom: -1px;
+    right: -200px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .HeroA_background_image {
+    width: 509px;
+    height: 415px;
+  }
+}
+
+@media only screen and (min-width: 1340px) {
+  .HeroA_background_image {
+    width: 509px;
+    height: 440px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .HeroA_background_image {
+    right: -230px;
+  }
+}
+
+.HeroA .HeroA_text {
+  padding-top: 120px;
+  padding-bottom: 40px;
+  color: #fff;
+}
+
+@media only screen and (min-width:1024px) {
+  .HeroA .HeroA_text {
+    padding-top: 150px;
+  }
+}
+
+.HeroA .HeroA_title {
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--title-1);
+  font-weight: 300;
+  line-height: 110%;
+  color: #fff;
+}
+
+.HeroA_description {
+  margin-top: 30px;
+  line-height: 140%;
+  font-family: var(--bodyFont), Arial, Helvetica, sans-serif;
+  font-size: var(--description-3);
+  font-weight: 400;
+}
