@@ -1,0 +1,37 @@
+.SearchResultsModule_aside {}
+
+@media only screen and (min-width: 768px) {
+  .SearchResultsModule_aside {
+    max-width: 35%;
+    min-width: 35%;
+    padding-right: 50px;
+  }
+}
+
+.SearchResultsModule_filter {}
+
+@media only screen and (min-width: 768px) {
+  .SearchResultsModule_filter {
+    max-width: 260px;
+  }
+}
+
+.SearchResultsModule_filter_header_wrapper {
+  padding: 22px 0;
+}
+
+.SearchResultsModule_filter_header {}
+
+.SearchResultsModule_filter_title {
+  display: block;
+  align-self: center;
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--title-6);
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+
+.SearchResultsModule_filters_toggle {
+  
+}
