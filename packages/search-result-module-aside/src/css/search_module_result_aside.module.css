@@ -16,6 +16,11 @@
   }
 }
 
+
+/********************************************/
+/********         Header            *********/
+/********************************************/
+
 .SearchResultsModule_filter_header_wrapper {
   padding: 22px 0;
 }
@@ -32,6 +37,213 @@
   text-transform: uppercase;
 }
 
-.SearchResultsModule_filters_toggle {
-  
+.SearchResultsModule_filters_toggle {}
+
+@media only screen and (min-width: 768px) {
+  .SearchResultsModule_filters_toggle {
+    display: none;
+  }
+}
+
+.SearchResultsModule_filters_toggle span {
+  align-self: center;
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--title-6);
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+
+.SearchResultsModule_applied {
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.data_mobile_hidden {
+  display: none;
+}
+
+/* @media only screen and (min-width: 768px) {
+  .SearchResultsModule_applied.data_mobile_hidden[data-show] {
+    display: flex;
+  }
+} */
+
+.SearchResultsModule_applied_heading {
+  color: var(--primaryTextColor);
+  font-family: var(--primaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.43;
+  margin-right: 10px;
+}
+
+.SearchResultsModule_applied_reset {
+  background: unset;
+  border: none;
+  color: var(--primaryColor);
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--title-8);
+  font-weight: 700;
+  font-weight: 400;
+  line-height: 110%;
+  line-height: normal;
+  text-decoration: underline;
+}
+
+.SearchResultsModule_applied_list {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.SearchResultsModule_aside_search {
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .SearchResultsModule_aside_search.data_mobile_hidden {
+    display: block;
+  }
+}
+
+.SearchResultsModule_aside_search svg {
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  left: 12px;
+  top: 11px;
+}
+
+.SearchResultsModule_aisde_search_input {
+  display: block;
+  width: 100%;
+  margin: 20px 0 0;
+  padding: 10px 40px 10px 35px;
+  background-color: #fafafa;
+  border: 0;
+  border-radius: 20px;
+  color: #232f3e;
+  font-size: 12px;
+  line-height: 1.67;
+}
+
+.SearchResultsModule_aside_search_clear {
+  display: none;
+  padding: 3px 5px;
+  position: absolute;
+  right: 12px;
+  top: 6px;
+  opacity: .75;
+  cursor: pointer;
+}
+
+
+/********************************************/
+/********         Content           *********/
+/********************************************/
+.SearchResultsModule_filter_content_wrapper {}
+
+.SearchResultsModule_filter_content {}
+
+.SearchFilter {
+  border-top: 1px solid #aab7b8;
+  padding: 30px 0;
+}
+
+.SearchFilter_content {}
+
+.SearchFilter_heading {
+  position: relative;
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--title-6);
+  font-weight: 700;
+  line-height: 110%;
+  display: flex;
+  align-items: center;
+}
+
+.SearchFilter .plus_sign {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  right: 0;
+  cursor: pointer;
+}
+
+.SearchFilter .plus_sign::before {
+  width: 100%;
+  height: 3px;
+}
+
+.SearchFilter .plus_sign::after {
+  width: 0;
+  height: 0;
+}
+
+.SearchFilter .plus_sign::before,
+.SearchFilter .plus_sign::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: height .3s ease-in-out;
+  background-color: var(--buttonTextColor);
+}
+
+.SearchFilter-content .SearchFilter_items {
+  display: block;
+}
+
+.SearchFilter_items_item {
+  margin-top: 20px;
+}
+
+.SearchFilter .SearchFilterInput {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.CheckboxInput {}
+
+.CheckboxInput_label {
+  display: flex;
+  align-items: flex-start;
+}
+
+.CheckboxInput input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  margin-top: 1px;
+  background-color: #fff;
+  border: 1px solid #aab7b8;
+  border-radius: 2px;
+}
+
+.CheckboxInput input:checked {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%23FFF' d='M13.8 4.936a.608.608 0 0 0-.175-.448l-.883-.877a.596.596 0 0 0-.437-.185.596.596 0 0 0-.436.185L7.125 9.15 4.93 6.95a.596.596 0 0 0-.436-.185.596.596 0 0 0-.437.185l-.883.877A.608.608 0 0 0 3 8.275c0 .175.058.322.175.438l3.513 3.528a.596.596 0 0 0 .437.185.607.607 0 0 0 .446-.185l6.054-6.867a.596.596 0 0 0 .175-.438z'/%3E%3C/g%3E%3C/svg%3E") no-repeat 50%;
+  background-color: var(--secondaryColor);
+}
+
+.CheckboxInput input:active,
+.CheckboxInput input:checked {
+  border-color: var(--secondaryColor);
+}
+
+.SearchFilterInput .CheckboxInput_label span {
+  margin-left: 10px;
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--label-4);
+  font-weight: 400;
+  line-height: 100%;
 }

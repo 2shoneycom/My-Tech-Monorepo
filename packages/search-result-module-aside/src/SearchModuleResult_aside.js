@@ -60,16 +60,16 @@ function SearchResultsModule_aside() {
                   <ul className={styles.SearchFilter_items}>
                     {/* map으로 치환해야하는 부분 */}
                     <li className={styles.SearchFilter_items_item}>
-                      <div className={styles.SearchFilter_input}>
+                      <div className={styles.SearchFilterInput}>
                         <div className={styles.CheckboxInput}>
-                          <label><input type='checkbox' name='' value='' />Conversational AI&nbsp(304)</label>
+                          <label className={styles.CheckboxInput_label}><input type='checkbox' name='' value='' /><span>Conversational AI&nbsp(304)</span></label>
                         </div>
                       </div>
                     </li>
                     <li className={styles.SearchFilter_items_item}>
-                      <div className={styles.SearchFilter_input}>
+                      <div className={styles.SearchFilterInput}>
                         <div className={styles.CheckboxInput}>
-                          <label><input type='checkbox' name='' value='' />Machine learning&nbsp(157)</label>
+                          <label className={styles.CheckboxInput_label}><input type='checkbox' name='' value='' /><span>Machine learning&nbsp(157)</span></label>
                         </div>
                       </div>
                     </li>
@@ -90,16 +90,16 @@ function SearchResultsModule_aside() {
                   <ul className={styles.SearchFilter_items}>
                     {/* map으로 치환해야하는 부분 */}
                     <li className={styles.SearchFilter_items_item}>
-                      <div className={styles.SearchFilter_input}>
+                      <div className={styles.SearchFilterInput}>
                         <div className={styles.CheckboxInput}>
-                          <label><input type='checkbox' name='' value='' />Alexa&nbsp(147)</label>
+                          <label className={styles.CheckboxInput_label}><input type='checkbox' name='' value='' /><span>Alexa&nbsp(147)</span></label>
                         </div>
                       </div>
                     </li>
                     <li className={styles.SearchFilter_items_item}>
-                      <div className={styles.SearchFilter_input}>
+                      <div className={styles.SearchFilterInput}>
                         <div className={styles.CheckboxInput}>
-                          <label><input type='checkbox' name='' value='' />Natural-language understanding(NLU)&nbsp(86)</label>
+                          <label className={styles.CheckboxInput_label}><input type='checkbox' name='' value='' /><span>Natural-language understanding(NLU)&nbsp(86)</span></label>
                         </div>
                       </div>
                     </li>
