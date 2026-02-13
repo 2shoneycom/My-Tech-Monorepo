@@ -2,6 +2,7 @@ import styles from './css/searchlandingpage.module.css';
 
 import SearchResultsModule_aside from '@sean/search-result-module-aside'
 import PromoF from '@sean/promo-f';
+import { Link } from 'react-router-dom';
 
 function SearchLandingPage() {
   return (
@@ -76,7 +77,40 @@ function SearchLandingPage() {
                       <PromoF />
                     </li>
                   </ul>
-                  <div className={styles.SearchResultsModule_pagination}></div>
+                  <div className={styles.SearchResultsModule_pagination}>
+                    <div className={styles.SearchResultsModule_previousPage}>
+                      <span>
+                        <svg className="chevron" id="chevron" viewBox="0 0 9 14">
+                          <g>
+                            <path d="M0.6,0.3c-0.4,0.4-0.4,1,0,1.4L5.8,7l-5.2,5.2c-0.4,0.4-0.4,1,0,1.4c0.4,0.4,1,0.4,1.4,0l6.5-6.5L8.7,7L8.5,6.8 L2,0.3C1.6-0.1,1-0.1,0.6,0.3z"></path>
+                          </g>
+                        </svg>
+                      </span>
+                    </div>
+                    <div className={`${styles.SearchPagination_previousPage}` + `${styles.currentPage}`}>
+                      <Link to={'#'}> 1 </Link>
+                    </div>
+                    <div className={styles.SearchPagination_nextPage}>
+                      <Link to={'#'}> 2 </Link>
+                    </div>
+                    <div className={styles.SearchPagination_nextPage}>
+                      <Link to={'#'}> 3 </Link>
+                    </div>
+                    <span className={styles.SearchPagination_separator}>...</span>
+                    <div className={styles.SearchPagination_nextPage}>
+                      <Link to={'#'}> 24 </Link>
+                    </div>
+                    <div className={styles.SearchResultsModule_nextPage}>
+                      <Link to={'#'}>
+                        <svg className="chevron" id="chevron" viewBox="0 0 9 14">
+                          <g>
+                            <path d="M0.6,0.3c-0.4,0.4-0.4,1,0,1.4L5.8,7l-5.2,5.2c-0.4,0.4-0.4,1,0,1.4c0.4,0.4,1,0.4,1.4,0l6.5-6.5L8.7,7L8.5,6.8 L2,0.3C1.6-0.1,1-0.1,0.6,0.3z"></path>
+                          </g>
+                        </svg>
+                        <span>Next</span>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
