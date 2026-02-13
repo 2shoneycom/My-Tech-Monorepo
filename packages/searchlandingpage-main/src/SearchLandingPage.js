@@ -1,6 +1,7 @@
 import styles from './css/searchlandingpage.module.css';
 
 import SearchResultsModule_aside from '@sean/search-result-module-aside'
+import PromoF from '@sean/promo-f';
 
 function SearchLandingPage() {
   return (
@@ -36,7 +37,43 @@ function SearchLandingPage() {
                   <ul className={styles.SearchResultsModule_results}>
                     {/* map이 필요한 영역일 것 같음 */}
                     <li className={styles.SearchResultsModule_results_item}>
-                      <div className={styles.PromoF}></div>
+                      <PromoF />
+                    </li>
+                    <li className={styles.SearchResultsModule_results_item}>
+                      <PromoF />
+                    </li>
+                    <li className={styles.SearchResultsModule_results_item}>
+                      <PromoF />
+                    </li>
+                    <li className={styles.SearchResultsModule_results_item}>
+                      <PromoF />
+                    </li>
+                    <li className={styles.SearchResultsModule_results_item}>
+                      <PromoF />
+                    </li>
+                    <li className={styles.SearchResultsModule_results_item}>
+                      <PromoF />
+                    </li>
+                    <li className={styles.SearchResultsModule_results_item}>
+                      <PromoF />
+                    </li>
+                    <li className={styles.SearchResultsModule_results_item}>
+                      <PromoF />
+                    </li>
+                    <li className={styles.SearchResultsModule_results_item}>
+                      <PromoF />
+                    </li>
+                    <li className={styles.SearchResultsModule_results_item}>
+                      <PromoF />
+                    </li>
+                    <li className={styles.SearchResultsModule_results_item}>
+                      <PromoF />
+                    </li>
+                    <li className={styles.SearchResultsModule_results_item}>
+                      <PromoF />
+                    </li>
+                    <li className={styles.SearchResultsModule_results_item}>
+                      <PromoF />
                     </li>
                   </ul>
                   <div className={styles.SearchResultsModule_pagination}></div>
