@@ -55,6 +55,82 @@
   }
 }
 
-.SearchResultsModule_main {
-  /* 여기서부터 이어하시오 */
+@media only screen and (min-width: 768px) {
+  .SearchResultsModule_main {
+    flex-grow: 1;
+  }
+}
+
+.SearchResultsModule_results_header_wrapper {
+  padding: 22px 0;
+  border-bottom: 1px solid #aab7b8;
+  margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .SearchResultsModule_results_header {
+    height: 39px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.SearchResultsModule_count {
+  flex-grow: 1;
+  align-self: center;
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--title-6);
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+
+.SearchResultsModule_sorts {
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--label-4);
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.SearchResultsModule_sorts .Select {
+  display: inline-block;
+}
+
+.Select label {
+  display: flex;
+  align-items: center;
+}
+
+.Select label span {
+  margin-right: 15px;
+  white-space: nowrap;
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--title-6);
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+
+.Select select {
+  display: inline-block;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 10px 15px;
+  padding-right: 36px;
+
+  background: var(--buttonBgColor);
+  border: 1px solid var(--buttonTextColor);
+  border-radius: 0;
+
+  /* 잘 들어간건지 확인 요망 */
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAiIGhlaWdodD0iNiIgdmlld0JveD0iMCAwIDEwIDYiPgo8cGF0aCBmaWxsPSIjMDA3Y2I2IiBkPSJNOS44LDAuMmMtMC4zLTAuMy0wLjctMC4zLTEsMEw1LDMuOUwxLjMsMC4yYy0wLjMtMC4zLTAuNy0wLjMtMSwwQzAsMC41LDAsMSwwLjIsMS4ybDQuNiw0LjZMNSw2bDAuMS0wLjEKICAgIGw0LjYtNC42QzEwLDEsMTAsMC41LDkuOCwwLjJ6Ii8+Cjwvc3ZnPgo=) no-repeat right 15px top 17px;
+  
+  color: var(--buttonTextColor);
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--button-1);
+  font-weight: 700;
+  line-height: 110%;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
 }
