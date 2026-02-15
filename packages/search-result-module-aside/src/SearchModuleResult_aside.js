@@ -32,8 +32,8 @@ function SearchResultsModule_aside() {
             <div className={`${styles.SearchResultsModule_aside_search} ${styles.data_mobile_hidden}`}>
               <svg id="icon-magnify" viewBox="0 0 20 20">
                 <g fill="none" fillRule="evenodd" transform="translate(1.667 1.667)">
-                  <circle cx="7.708" cy="7.708" r="5.208" stroke="currentColor" stroke-width="1.5" transform="rotate(-45 7.708 7.708)"></circle>
-                  <path fill="currentColor" fill-rule="nonzero" d="M11.243 11.244c.325-.325.853-.325 1.178 0l2.357 2.357c.326.326.326.853 0 1.179-.325.325-.853.325-1.178 0l-2.357-2.357c-.326-.326-.326-.853 0-1.179z"></path>
+                  <circle cx="7.708" cy="7.708" r="5.208" stroke="currentColor" strokeWidth="1.5" transform="rotate(-45 7.708 7.708)"></circle>
+                  <path fill="currentColor" fillRule="nonzero" d="M11.243 11.244c.325-.325.853-.325 1.178 0l2.357 2.357c.326.326.326.853 0 1.179-.325.325-.853.325-1.178 0l-2.357-2.357c-.326-.326-.326-.853 0-1.179z"></path>
                 </g>
               </svg>
               <input className={styles.SearchResultsModule_aisde_search_input}

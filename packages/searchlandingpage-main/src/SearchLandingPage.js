@@ -24,7 +24,7 @@ function SearchLandingPage() {
                           <label className={styles.Select_label}>
                             <span>Sort</span>
                             <select className={styles.Select_input} name='s'>
-                              <option value={0} selected>Relevance</option>
+                              <option value={0} defaultValue={0}>Relevance</option>
                               <option value={1}>Newest</option>
                               <option value={2}>Oldest</option>
                               <option value={3}>A - Z</option>
@@ -87,7 +87,7 @@ function SearchLandingPage() {
                         </svg>
                       </span>
                     </div>
-                    <div className={`${styles.SearchPagination_previousPage}` + `${styles.currentPage}`}>
+                    <div className={`${styles.SearchPagination_previousPage} + ${styles.currentPage}`}>
                       <Link to={'#'}> 1 </Link>
                     </div>
                     <div className={styles.SearchPagination_nextPage}>
