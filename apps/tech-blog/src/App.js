@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import Home from "./routes/Home";
 import Blog from "./routes/Blog";
+import BlogPost from "./routes/BlogPost";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
       </Routes>
     </Router>
   );
