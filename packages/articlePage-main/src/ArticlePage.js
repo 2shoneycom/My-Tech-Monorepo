@@ -4,7 +4,7 @@ import styles from './css/articlePage.module.css';
 function ArticlePage({ article_category, article_headLine, article_subHeadLine, article_author,
   article_date, article_readDuration, article_content }) {
   return (
-    <main className="ArticlePage_main">
+    <main className={styles.ArticlePage_main}>
       {/* ::before */}
       <article className={styles.ArticlePage_mainContent}>
         <div className={styles.ArticlePage_category}>

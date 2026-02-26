@@ -25,7 +25,7 @@ function BlogPost() {
       <h2><p>Experimental design</p></h2>
       <p>For our experiments involving a personal-assistant agent, we used the AppWorld benchmark, which involves the completion of day-to-day activities through phone app interactions. For the agentic-RAG experiments, we implemented a DeepSearch Agent for intelligent information retrieval and synthesis, using two different datasets. For the reward functions, we relied on verifiable environment-based feedback for AppWorld and exact match and semantic accuracy for RAG tasks.</p>
       <p>Our RL training framework has two main components: an online simulator and an online RL trainer. The online simulator takes a batch of tasks and produces a batch of rollout trajectories — sequences of interactions between the agent and its environment, often involving dozens of API calls. It also produces a reward for each trajectory by running checks against ground truth.</p>
-      <div class="Enhancement" data-align-center="">
+      <div class="Enhancement" data-align-center=>
         <div class="Enhancement-item">
           <figure class="Figure">
             <div class="Figure-media">
@@ -34,7 +34,8 @@ function BlogPost() {
               </picture>
             </div>
             <div class="Figure-content">
-              <figcaption class="Figure-caption">RL-based-training pipeline.
+              <figcaption class="Figure-caption">
+                RL-based-training pipeline.
               </figcaption>
             </div>
           </figure>
