@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "../css/hamburger.module.css";
 
 function Hamburger({ navData, isMenuOpen }) {
-  const [navItemList, setNavItemList] = useState(navData.itemList);
+  const [navItemList, setNavItemList] = useState(navData.itemList_eng);
   const hamburgerRef = useRef(null);
 
   if (hamburgerRef.current) {

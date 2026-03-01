@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import styles from './css/articlePage.module.css';
 
 function ArticlePage({ article_category, article_headLine, article_subHeadLine, article_author,
-  article_date, article_readDuration, article_content }) {
+  article_date, article_readDuration, article_content, article_tags }) {
   return (
     <main className={styles.ArticlePage_main}>
       {/* ::before */}
@@ -88,9 +88,9 @@ function ArticlePage({ article_category, article_headLine, article_subHeadLine, 
           </div>
           <div className={styles.ArticlePage_articleBody}>
             <div className={styles.RichTextArticleBody}>
-              <div 
+              <div
                 className={`${styles.RichTextArticleBody_body} ${styles.RichTextBody}`}
-                dangerouslySetInnerHTML={{__html: article_content}}
+                dangerouslySetInnerHTML={{ __html: article_content }}
               >
                 {/* ::after */}
               </div>
@@ -117,16 +117,13 @@ function ArticlePage({ article_category, article_headLine, article_subHeadLine, 
               Tags
             </div>
             <ul className={styles.ListTags_items}>
-              <li className={styles.ListTags_items_item}>
-                <Link className={styles.Link} to='#'>
-                  Large language models(LLMs)
-                </Link>
-              </li>
-              <li className={styles.ListTags_items_item}>
-                <Link className={styles.Link} to='#'>
-                  Reinforcement learning
-                </Link>
-              </li>
+              {article_tags.map((tag) => 
+                <li className={styles.ListTags_items_item}>
+                  <Link className={styles.Link} to='#'>
+                    {tag}
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
         </div>

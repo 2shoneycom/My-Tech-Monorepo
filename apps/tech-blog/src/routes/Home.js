@@ -7,6 +7,8 @@ import FeaturedNews from '@sean/featured-news';
 import Publications from '@sean/section-publications';
 import Footer from '@sean/footer-type-a';
 
+
+import logoImg from "../assets/images/logo.png";
 import heroImg1 from '../assets/images/1764166800383.jpeg';
 
 const heroDataSample = [
@@ -326,7 +328,7 @@ const PublicationsDataSample = [
 function Home() {
   return (
     <div className={styles.top_container}>
-      <Header />
+      <Header logoImg={logoImg}/>
       <HeroSlide data={heroDataSample} />
       <AreaSection data={researchAreaDataSample} />
       <Fromtheblog data={fromtheblogDataSample} />

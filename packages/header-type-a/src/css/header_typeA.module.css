@@ -25,6 +25,7 @@
   height: 100%;
   font-size: var(--label-3);
   font-weight: 400;
+  max-width: calc(var(--contentWidth) + 100px);
 }
 
 .inner_box .flex_container {

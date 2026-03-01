@@ -47,6 +47,7 @@ function BlogPost() {
           article_date={postData.date}
           article_readDuration={postData.readDuration}
           article_content={postData.content}
+          article_tags={postData.tag}
         />
       }
       <Footer />

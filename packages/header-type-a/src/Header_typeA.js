@@ -4,22 +4,22 @@ import styles from "./css/header_typeA.module.css";
 import useSmartHeader from "./customHooks/useSmartHeader";
 import Hamburger from "./components/Hamburger";
 
-function Header_typeA() {
+function Header_typeA({ logoImg }) {
   /* [Basic Data] */
   // Here to load data you need
   const recievedNavData =
   {
-    itemList: ["Example1", "Example2", "Example3", "Example4", "Example5"],
+    itemList_eng: ["Articles Search", "Web", "Algorithm", "Common"],
+    itemList_kor: ["탐색", "웹 개발", "알고리즘", "공통 지식"],
     linkList: {
-      "Example1": "example1",
-      "Example2": "example2",
-      "Example3": "example3",
-      "Example4": "example4",
-      "Example5": "example5",
+      "Articles Search": "Articles Search",
+      "Web": "Web",
+      "Algorithm": "Algorithm",
+      "Common": "Common",
     },
   };
 
-  const [navItemList, setNavItemList] = useState(recievedNavData.itemList);
+  const [navItemList, setNavItemList] = useState(recievedNavData.itemList_eng);
   /* [Hamburger Menu] */
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -66,7 +66,7 @@ function Header_typeA() {
             className={styles.header_logo}
             to="/"
           >
-            <img src="https://assets.amazon.science/fb/1c/07d25693486eb3d6b49091864af7/amazonscience-squidink.svg" alt="Amazon Science"></img>
+            <img src={logoImg} alt="seans' tech blog"></img>
           </Link>
 
           {/* Navigator */}
@@ -84,7 +84,7 @@ function Header_typeA() {
         </div>
       </div>
       {/* Hamburger Menu */}
-      <Hamburger 
+      <Hamburger
         navData={recievedNavData}
         isMenuOpen={isMenuOpen}
       />

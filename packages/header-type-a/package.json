@@ -1,6 +1,6 @@
 {
   "name": "@sean/header-type-a",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/index.js",
   "peerDependencies": {
     "react": "^19.2.0",

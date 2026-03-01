@@ -12,8 +12,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:id" element={<BlogPost />} />
+        <Route path="/:a" element={<Blog />} />
+        <Route path="/:a/:id" element={<BlogPost />} />
       </Routes>
     </Router>
   );

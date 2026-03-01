@@ -44,6 +44,7 @@ export const dummyPosts = [
   {
     id: "모노레포: 프로젝트 모듈화 관리 방법",
     category: "Utilities",
+    tag: ["Project Management", "Git", "Repository"],
     title: "모노레포: 프로젝트 모듈화 관리 방법",
     subTitle: "프로젝트 진행 시, 모듈화 된 컴포넌트를 관리하기 위한 최적의 방법 모노레포를 소개한다",
     author: "Sean Lee",
@@ -89,6 +90,7 @@ export const dummyPosts = [
         결국 개별 프로젝트를 관리하는 것처럼 동작하기 때문에 수정이 일어날때마다 매번 사용된 프로젝트에 가서 복사/붙여넣기를 실행해야한다.
         </li>
       </ul>
+      <br>
       <h2>
         <p>해결책: 모노레포(Monorepo)</p>
       </h2>
@@ -118,10 +120,14 @@ export const dummyPosts = [
       </p>
       <ul class="rte2-style-ul">
         <li><b>쉬운 코드 공유 및 재사용:</b> 여러 프로젝트가 한곳에 있으므로, 공통 모듈(예: 디자인 시스템, 유틸리티 함수)을 분리하여 다른 프로젝트에서 쉽게 import 해서 쓸 수 있다.</li>
-        <li>
-        </li>
+        <li><b>원자적 커밋:</b> 공통 컴포넌트에 변경 사항이 생겼을 때, 해당 컴포넌트를 사용하는 A 앱과 B 앱의 코드도 한 번의 커밋으로 동시에 수정하고 테스트할 수 있다.</li>
+        <li><b>의존성 관리의 단순화:</b> 모든 프로젝트가 단일 진실 공급원(Single Source of Truth)을 공유하므로, 패키지 버전 파편화나 충돌을 방지하기 좋습니다.</li>
+        <li><b>일관된 개발 환경:</b> 모든 프로젝트가 동일한 린터(ESLint), 포매터(Prettier), 빌드 설정, CI/CD 파이프라인을 공유하기 쉽습니다.</li>
       </ul>
-      
+      <br>
+      <h2>
+        <p>모노레포 구축 방법</p>
+      </h2>
     `,
   },
 ];
