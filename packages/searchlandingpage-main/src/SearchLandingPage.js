@@ -4,7 +4,8 @@ import SearchResultsModule_aside from '@sean/search-result-module-aside'
 import PromoF from '@sean/promo-f';
 import { Link } from 'react-router-dom';
 
-function SearchLandingPage() {
+function SearchLandingPage({ results = [] }) {
+
   return (
     <main className={styles.SearchLandingPage_main}>
       <div className={styles.SearchResultsModule}>
@@ -37,39 +38,18 @@ function SearchLandingPage() {
                   </div>
                   <ul className={styles.SearchResultsModule_results}>
                     {/* map이 필요한 영역일 것 같음 */}
-                    <li className={styles.SearchResultsModule_results_item}>
-                      <PromoF />
-                    </li>
-                    <li className={styles.SearchResultsModule_results_item}>
-                      <PromoF />
-                    </li>
-                    <li className={styles.SearchResultsModule_results_item}>
-                      <PromoF />
-                    </li>
-                    <li className={styles.SearchResultsModule_results_item}>
-                      <PromoF />
-                    </li>
-                    <li className={styles.SearchResultsModule_results_item}>
-                      <PromoF />
-                    </li>
-                    <li className={styles.SearchResultsModule_results_item}>
-                      <PromoF />
-                    </li>
-                    <li className={styles.SearchResultsModule_results_item}>
-                      <PromoF />
-                    </li>
-                    <li className={styles.SearchResultsModule_results_item}>
-                      <PromoF />
-                    </li>
-                    <li className={styles.SearchResultsModule_results_item}>
-                      <PromoF />
-                    </li>
-                    <li className={styles.SearchResultsModule_results_item}>
-                      <PromoF />
-                    </li>
-                    <li className={styles.SearchResultsModule_results_item}>
-                      <PromoF />
-                    </li>
+                    {results.map((item, index) =>
+                      <li className={styles.SearchResultsModule_results_item}>
+                        <PromoF
+                          article_category={item.category}
+                          article_headLine={item.title}
+                          article_subHeadLine={item.subTitle}
+                          article_author={item.author}
+                          article_date={item.date}
+                          airticle_thumbnail={item.thumbnail}
+                        />
+                      </li>
+                    )}
                     <li className={styles.SearchResultsModule_results_item}>
                       <PromoF />
                     </li>

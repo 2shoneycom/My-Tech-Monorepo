@@ -9,13 +9,13 @@ function Header_typeA({ logoImg }) {
   // Here to load data you need
   const recievedNavData =
   {
-    itemList_eng: ["Articles Search", "Web", "Algorithm", "Common"],
-    itemList_kor: ["탐색", "웹 개발", "알고리즘", "공통 지식"],
+    itemList_eng: ["Articles Search", "Web", "Algorithm", "Developments"],
+    itemList_kor: ["탐색", "웹", "알고리즘", "개발"],
     linkList: {
       "Articles Search": "Articles Search",
-      "Web": "Web",
-      "Algorithm": "Algorithm",
-      "Common": "Common",
+      "Web": "research-areas/Web",
+      "Algorithm": "research-areas/Algorithm",
+      "Developments": "research-areas/Developments",
     },
   };
 

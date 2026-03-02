@@ -21,7 +21,7 @@ function Hero_typeA() {
             </g>
           </svg>
           <div className={styles.HeroA_text}>
-            <h1 className={styles.HeroA_title}>Amazon Science Blog</h1>
+            <h1 className={styles.HeroA_title}>Sean's Tech Blog</h1>
             <div className={styles.HeroA_description}>
               Technical deep-dives and perspectives from our scientists who are pushing boundaries across multiple scientific disciplines while solving real-world challenges. Explore how our teams combine research excellence, world-class data, and advanced infrastructure to create transformative customer experiences — from AI and robotics to cloud computing, sustainability innovations, and beyond — all while maintaining our commitment to responsible technology development.
             </div>

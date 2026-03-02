@@ -4,16 +4,18 @@ import {
   Route,
 } from "react-router-dom";
 import Home from "./routes/Home";
-import Blog from "./routes/Blog";
+import ArticleSearch from "./routes/ArticleSearch";
 import BlogPost from "./routes/BlogPost";
+import SubCategory from "./routes/SubCategory";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/:a" element={<Blog />} />
-        <Route path="/:a/:id" element={<BlogPost />} />
+        <Route path="/Articles Search" element={<ArticleSearch />} />
+        <Route path="/research-areas/:category" element={<SubCategory />} />
+        <Route path="/post/:id" element={<BlogPost />} />
       </Routes>
     </Router>
   );

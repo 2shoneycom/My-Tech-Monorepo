@@ -7,6 +7,8 @@ import ArticlePage from "@sean/articlePage-main";
 import Footer from "@sean/footer-type-a";
 import { getPostById } from "../api/posts";
 
+import logoImg from "../assets/images/logo.png";
+
 function BlogPost() {
   const { id } = useParams();
 
@@ -35,7 +37,7 @@ function BlogPost() {
 
   return (
     <div className={styles.top_container}>
-      <Header />
+      <Header logoImg={logoImg}/>
       {error || !postData ?
         <h2>Something went wrong</h2>
         :
