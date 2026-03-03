@@ -9,46 +9,8 @@ import Footer from '@sean/footer-type-a';
 
 
 import logoImg from "../assets/images/logo.png";
-import heroImg1 from '../assets/images/1764166800383.jpeg';
 import { dummyPosts } from "../data/dummyPosts";
 
-const heroDataSample = [
-  {
-    id: 1,
-    title: "Dialogue Boost: How Amazon is using AI to enhance TV and movie dialogue",
-    desc: "New audio-processing technology is making entertainment more accessible for millions of viewers.",
-    image: heroImg1, // 이미지 경로
-    link: "/post/1" // 'Read more' 버튼 누르면 갈 주소
-  },
-  {
-    id: 2,
-    title: "The overthinking problem in AI",
-    desc: "Reasoning models can generate seven to 10 times as many tokens as necessary on simple tasks, creating unsustainable costs at scale. Amazon's vision for metacognitive AI could fundamentally shift how models allocate computational resources.",
-    image: heroImg1,
-    link: "/post/2"
-  },
-  {
-    id: 3,
-    title: "Nova Forge: Build your own frontier AI",
-    desc: "AGI SVP Rohit Prasad on how to mix your data with Amazon's training data at every stage — deep customization without catastrophic forgetting.",
-    image: heroImg1,
-    link: "/post/3"
-  },
-  {
-    id: 4,
-    title: "Demystifying AI agents",
-    desc: "How agentic systems work under the hood — and how AWS’s new AgentCore framework implements their essential components.",
-    image: heroImg1,
-    link: "/post/3"
-  },
-  {
-    id: 5,
-    title: "How Amazon uses AI agents to anticipate and counter cyber threats",
-    desc: "Competitive-agent architecture develops security protections at machine speed, reducing weeks of work to hours.",
-    image: heroImg1,
-    link: "/post/3"
-  },
-];
 const researchAreaDataSample = [
   {
     id: 1,

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "../css/hamburger.module.css";
 
@@ -6,13 +6,15 @@ function Hamburger({ navData, isMenuOpen }) {
   const [navItemList, setNavItemList] = useState(navData.itemList_eng);
   const hamburgerRef = useRef(null);
 
-  if (hamburgerRef.current) {
-    hamburgerRef.current.style.setProperty('--hamburger-width', `${hamburgerRef.current.offsetWidth}px`);
-  }
+  useEffect(() => {
+    if (hamburgerRef.current) {
+      hamburgerRef.current.style.setProperty('--hamburger-width', `${hamburgerRef.current.offsetWidth}px`);
+    }
+  }, [isMenuOpen]);
 
   let hamburgerClass = styles.hamburger_outer_box;
   if (!isMenuOpen) {
-    hamburgerClass = `${hamburgerClass} + ${styles.hamburger_hidden}`;
+    hamburgerClass = `${hamburgerClass} ${styles.hamburger_hidden}`;
   }
 
   return (
