@@ -21,7 +21,7 @@
     display: inline;
   }
 
-  .PromoF_details>::after {
+  .PromoF_details>:not(:last-child)::after {
     content: " | ";
     margin-left: 4px;
     margin-right: 4px;

@@ -1,6 +1,59 @@
 import monoRepoImg1 from '../assets/images/monorepo_1.png';
+import clipPathImg1 from '../assets/images/clip-path_1.png'
 
 export const dummyPosts = [
+  // clip-path 내용 정리
+  {
+    id: "clip-path 내용 정리",
+    category: "Web",
+    tag: ["CSS"],
+    title: "clip-path 내용 정리",
+    subTitle: "요소를 자르는 효과를 구현하는 CSS의 clip-path 내용 정리",
+    author: "Sean Lee",
+    date: "March 3, 2026",
+    readDuration: 5,
+    thumbnail: clipPathImg1,
+    content: `
+      <p>
+        별다른 일을 수행하지 않으면 HTML 요소의 기본적인 모양은 직사각형이다. 하지만 실제 웹사이트에서는 원, 마름모, 육각형, 그 외 여러 다양한 모양의 요소들이 필요할 때가 있다. 이럴때 clip-path 속성을 사용하면 된다.
+      </p>
+      <h2>
+        <p>기본 문법 및 사용 예시</p>
+      </h2>
+      <p>
+        clip-path 속성의 기본적인 사용방법은 다음과 같다.
+      </p>
+      <div class="CodeBlock">
+        <div class="CodeBlock_header">
+          <span>CSS</span>
+        </div>
+        <pre><code>/* 예시 */
+clip-path: circle(40%);
+clip-path: ellipse(130px 140px at 10% 20%);
+clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+clip-path: path("M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z");
+clip-path: rect(5px 145px 160px 5px round 20%);
+clip-path: xywh(0 5px 100% 75% round 15% 0);</code></pre>
+      </div>
+      <div class="Enhancement" data-align-center=>
+        <div class="Enhancement-item">
+          <figure class="Figure">
+            <div class="Figure-media">
+              <picture>
+                <img class="Image" data-image-size="figureLarge" alt="monorepo_1.png" src=${clipPathImg1}>
+              </picture>
+            </div>
+            <div class="Figure-content">
+              <figcaption class="Figure-caption">
+                위의 코드의 실행 결과
+              </figcaption>
+            </div>
+          </figure>
+        </div>
+      </div>
+    `
+  },
+  // 모노레포: 프로젝트 모듈화 관리 방법
   {
     id: "모노레포: 프로젝트 모듈화 관리 방법",
     category: "Developments",
@@ -9,8 +62,8 @@ export const dummyPosts = [
     subTitle: "프로젝트 진행 시, 모듈화 된 컴포넌트를 관리하기 위한 최적의 방법 모노레포를 소개한다",
     author: "Sean Lee",
     date: "Feburary 27, 2026",
-    thumbnail: monoRepoImg1,
     readDuration: 10,
+    thumbnail: monoRepoImg1,
     content: `
       <p>
         웹, 게임, 어플리케이션 등 모든 프로젝트에서 모듈화는 중요하다. 다름 아닌 '재사용성'때문이다. 내가 1번 프로젝트를 진행하며 만든 <헤더> 컴포넌트가 그대로 혹은 조금만 바꿔서 2번 프로젝트에서 쓰일 수 있을 것 같다면, 그때 모듈화는 빛을 발한다. 
@@ -91,6 +144,7 @@ export const dummyPosts = [
       </h2>
     `,
   },
+  // Customizing multiturn AI agents with reinforcement learning
   {
     id: "Customizing multiturn AI agents with reinforcement learning",
     category: "Conversational AI",
@@ -99,6 +153,7 @@ export const dummyPosts = [
     author: "Sean Lee",
     date: "January 13, 2026",
     readDuration: 7,
+    thumbnail: "https://assets.amazon.science/dims4/default/7ed69ad/2147483647/strip/true/crop/1920x1080+0+0/resize/1200x675!/quality/90/?url=http%3A%2F%2Famazon-topics-brightspot.s3.amazonaws.com%2Fscience%2Ff8%2Fba%2F98dec56b4e74ba13050a0d22931e%2Fsimulator-trainer-16x9.jpg",
     content: `
       <p>In today's rapidly evolving AI landscape, organizations increasingly need AI agents that excel in specific domains and business environments. While general-purpose AI systems demonstrate impressive capabilities across broad tasks, they often fall short when deployed in specialized contexts that require deep understanding of particular workflows, tools, and organizational needs.</p>
       <p>In recent work, scientists with Amazon Web Services’ AI Labs have been investigating how to efficiently adapt general-purpose agents to specific domains without requiring extensive expertise in machine learning or prohibitive computational resources. Through systematic experimentation across two distinct use cases — personal-assistant agents and agentic retrieval-augmented generation (<a class="Link" href="https://www.amazon.science/tag/retrieval-augmented-generation-rag" data-cms-ai="0">RAG</a>) — we've demonstrated that reinforcement-learning-based customization can significantly boost task success rates across diverse use cases, even with relatively small amounts of training data.<br></p>

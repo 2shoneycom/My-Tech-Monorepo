@@ -7,37 +7,33 @@ function Publications({ data = [] }) {
       {/* ::before */}
       <div className={styles.header_wrapper}>
         <h2 className={styles.header}>Publications</h2>
-        <Link className={styles.header_button} to='/'>View all</Link>
+        <Link className={styles.header_button} to='/Articles Search'>View all</Link>
       </div>
       <div className={styles.body}>
         <ul className={styles.body_items}>
-          {data.map((item, index) => 
+          {data.map((item, index) =>
             <li className={styles.body_items_item} key={index}>
               <div className={styles.PromoF}>
                 <div className={styles.PromoF_title}>
-                  <Link className={styles.Link} to={item.link}>{item.title}</Link>
+                  <Link className={styles.Link} to={`/post/${item.title}`}>{item.title}</Link>
                 </div>
                 <div className={styles.PromoF_details}>
                   <div className={styles.PromoF_authors}>
                     <Link className={styles.Link} to={`/author/${item.author}`}>{item.author}</Link>
                     {/* ::after*/}
                   </div>
-                  <div className={styles.PromoF_journal}>
-                    {item.journal}
-                    {/* ::after */}
-                  </div>
                   <div className={styles.PromoF_date}>{item.date}</div>
                 </div>
                 <div className={styles.PromoF_content}>
                   <div className={styles.PromoF_body}>
                     <div className={styles.PromoF_description}>
-                      {item.description}
+                      {item.subTitle}
                       <span>...
-                        <Link className={styles.Link} to={item.link}>Read more</Link>
+                        <Link className={styles.Link} to={`/post/${item.title}`}>Read more</Link>
                       </span>
                     </div>
                     <div className={styles.PromoF_category}>
-                      <Link className={styles.Link}>{item.category}</Link>
+                      <Link className={styles.Link} to={`/research-areas/${item.category}`}>{item.category}</Link>
                     </div>
                   </div>
                 </div>

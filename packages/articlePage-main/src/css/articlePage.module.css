@@ -505,3 +505,63 @@ main .ArticlePage_researchAreas {
 main .ArticlePage_tags {
   margin-top: 30px;
 }
+
+/* 코드 블록 전체 컨테이너 */
+:global(.CodeBlock) {
+  margin: 2.5rem 0;
+  background-color: #1e1e1e; /* VS Code 스타일 다크 배경 */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 상단 헤더 (언어 표시) */
+:global(.CodeBlock_header) {
+  background-color: #2d2d2d;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid #3d3d3d;
+}
+
+:global(.CodeBlock_header) span {
+  color: #aaa;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* 코드 본문 영역 */
+.RichTextBody pre {
+  margin: 0;
+  padding: 1.5rem;
+  overflow-x: auto; /* 코드가 길면 가로 스크롤 */
+}
+
+.RichTextBody pre code {
+  color: #d4d4d4; /* 옅은 회색 글자색 */
+  font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre;
+}
+
+/* 인라인 코드 스타일 (문장 중간에 나오는 `code`) */
+:not(pre) > code {
+  background-color: #f0f2f5;
+  color: #e91e63; /* 강조색 */
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+/* 실제 결과물을 보여주는 샘플 박스 */
+:global(.ClipPath_Preview) {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin: 2rem auto;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* 이 부분을 설명하는 값으로 변경 */
+}

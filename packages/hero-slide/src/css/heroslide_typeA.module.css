@@ -56,6 +56,20 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.hero_layer2_content_wrapper {
+  margin-inline: 50px;
+  max-width: calc(var(--contentWidth) + 100px);
+}
+
+@media only screen and (min-width: 1340px) {
+  .hero_layer2_content_wrapper {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--contentWidth);
+  }
+}
+
 .hero_layer2 .description_area {
   width: 100%;
   display: flex;
@@ -63,7 +77,7 @@
 }
 
 .description_area .description_content_area {
-  padding: 4em;
+  margin-bottom: 4em;
   max-width: 700px;
 }
 
@@ -104,13 +118,7 @@
 
 .hero_layer2 .navigation_area {
   width: 100%;
-  padding: 0 4em 3em 4em;
-}
-
-@media screen and (max-width: 1023px) {
-  .hero_layer2 .navigation_area {
-    padding: 0 0 0 4em;
-  }
+  margin-bottom: 3em;
 }
 
 .navigation_area .navigation_flex_box {
@@ -137,7 +145,7 @@
   /* 채워지는 색상 */
   width: 0%;
   /* 이 부분은 JS가 제어합니다 */
-  
+
   /* transition: width 0.1s linear;
   부드럽게 이어지도록 설정 */
 }

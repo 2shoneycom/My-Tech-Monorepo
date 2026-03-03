@@ -50,12 +50,6 @@ function SearchLandingPage({ results = [] }) {
                         />
                       </li>
                     )}
-                    <li className={styles.SearchResultsModule_results_item}>
-                      <PromoF />
-                    </li>
-                    <li className={styles.SearchResultsModule_results_item}>
-                      <PromoF />
-                    </li>
                   </ul>
                   <div className={styles.SearchResultsModule_pagination}>
                     <div className={styles.SearchResultsModule_previousPage}>

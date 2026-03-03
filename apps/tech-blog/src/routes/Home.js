@@ -10,6 +10,7 @@ import Footer from '@sean/footer-type-a';
 
 import logoImg from "../assets/images/logo.png";
 import heroImg1 from '../assets/images/1764166800383.jpeg';
+import { dummyPosts } from "../data/dummyPosts";
 
 const heroDataSample = [
   {
@@ -326,10 +327,13 @@ const PublicationsDataSample = [
 ]
 
 function Home() {
+  // 히어로 슬라이드쇼 데이터 불러오기 (최신순 5개)
+  const heroData = dummyPosts.slice(0, 4);
+
   return (
     <div className={styles.top_container}>
       <Header logoImg={logoImg}/>
-      <HeroSlide data={heroDataSample} />
+      <HeroSlide data={heroData} />
       <AreaSection data={researchAreaDataSample} />
       <Fromtheblog data={fromtheblogDataSample} />
       <FeaturedNews data={featuredNewsDataSample} />

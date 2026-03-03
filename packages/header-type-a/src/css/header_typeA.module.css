@@ -23,9 +23,23 @@
 
 .outer_box .inner_box {
   height: 100%;
+  margin: 0 auto;
+  max-width: calc(var(--contentWidth) + 100px);
   font-size: var(--label-3);
   font-weight: 400;
-  max-width: calc(var(--contentWidth) + 100px);
+}
+
+@media only screen and (min-width: 768px) {
+  .outer_box .inner_box {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .outer_box .inner_box {
+    max-width: 1240px;
+    padding: 0;
+  }
 }
 
 .inner_box .flex_container {
@@ -75,12 +89,7 @@
   color: var(--primaryColor);
 }
 
-/* Responsive Web Design (width >= 1025px) */
 @media screen and (min-width: 1025px) {
-  .outer_box .inner_box {
-    margin: 0 3rem;
-  }
-
   .flex_container .header_navigator {
     flex: 1;
     display: flex;
