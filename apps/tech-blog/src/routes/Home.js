@@ -7,8 +7,8 @@ import FeaturedNews from '@sean/featured-news';
 import Publications from '@sean/section-publications';
 import Footer from '@sean/footer-type-a';
 
-
-import logoImg from "../assets/images/logo.png";
+// 데이터 로드
+import headerData from "../data/headerData";
 import { dummyPosts } from "../data/dummyPosts";
 
 const researchAreaDataSample = [
@@ -286,7 +286,7 @@ const PublicationsDataSample = [
     author: "Sean Lee",
     journal: "AAAI 2026",
   },
-]
+];
 
 function Home() {
   // 히어로 슬라이드쇼 데이터 불러오기 (최신순 5개)
@@ -294,7 +294,12 @@ function Home() {
 
   return (
     <div className={styles.top_container}>
-      <Header logoImg={logoImg}/>
+      <Header
+        logoImg={headerData.logoImg}
+        menuItems={headerData.menuItems}
+        subMenuItems={headerData.subMenuItems}
+        subTitles={headerData.subTitles}
+      />
       <HeroSlide data={heroData} />
       <AreaSection data={researchAreaDataSample} />
       <Fromtheblog data={fromtheblogDataSample} />

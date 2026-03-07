@@ -7,7 +7,8 @@ import ArticlePage from "@sean/articlePage-main";
 import Footer from "@sean/footer-type-a";
 import { getPostById } from "../api/posts";
 
-import logoImg from "../assets/images/logo.png";
+// 데이터 로드
+import headerData from "../data/headerData";
 
 function BlogPost() {
   const { id } = useParams();
@@ -37,7 +38,12 @@ function BlogPost() {
 
   return (
     <div className={styles.top_container}>
-      <Header logoImg={logoImg}/>
+      <Header
+        logoImg={headerData.logoImg}
+        menuItems={headerData.menuItems}
+        subMenuItems={headerData.subMenuItems}
+        subTitles={headerData.subTitles}
+      />
       {error || !postData ?
         <h2>Something went wrong</h2>
         :

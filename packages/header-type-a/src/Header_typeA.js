@@ -4,22 +4,7 @@ import styles from "./css/header_typeA.module.css";
 import useSmartHeader from "./customHooks/useSmartHeader";
 import Hamburger from "./components/Hamburger";
 
-function Header_typeA({ logoImg }) {
-  /* [Basic Data] */
-  // Here to load data you need
-  const recievedNavData =
-  {
-    itemList_eng: ["Articles Search", "Web", "Algorithm", "Developments"],
-    itemList_kor: ["탐색", "웹", "알고리즘", "개발"],
-    linkList: {
-      "Articles Search": "Articles Search",
-      "Web": "research-areas/Web",
-      "Algorithm": "research-areas/Algorithm",
-      "Developments": "research-areas/Developments",
-    },
-  };
-
-  const [navItemList, setNavItemList] = useState(recievedNavData.itemList_eng);
+function Header_typeA({ logoImg, menuItems, subMenuItems, subTitles }) {
   /* [Hamburger Menu] */
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -71,21 +56,74 @@ function Header_typeA({ logoImg }) {
 
           {/* Navigator */}
           <div className={styles.header_navigator}>
-            {navItemList.map((navItem, index) =>
-              <Link
-                className={styles.header_navigator_item}
-                to={`/${recievedNavData.linkList[navItem]}`}
-                key={index}
-              >
-                {navItem}
-              </Link>
-            )}
+            {menuItems.map((item, index) => {
+              // 하위 메뉴가 있을 때
+              if (subMenuItems[index] != null)
+                return (
+                  <div className={styles.NavigationItem} key={index}>
+                    <div className={styles.NavigationItem_text}>
+                      <div className={styles.NavigationItem_text_link}>
+                        {item}
+                      </div>
+                      <div className={styles.NavigationItem_more}>
+                        <button>
+                          <svg id="chevron_nav_dropdown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8">
+                            <path d="M6.97951 1.7706C7.21235 1.53988 7.58746 1.53993 7.82033 1.7706C8.05623 2.00435 8.05623 2.38548 7.82033 2.61923L4.0049 6.40048L4.00001 6.3956L3.99611 6.40048L0.179702 2.61923C-0.0560031 2.38552 -0.055986 2.00431 0.179702 1.7706C0.412507 1.53992 0.787647 1.54003 1.02052 1.7706L4.00001 4.72177L6.97951 1.7706Z"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    {/* 드롭다운 메뉴 영역 */}
+                    <ul className={styles.NavigationItem_items}>
+                      <li className={styles.NavigationItem_items_item}>
+                        <div className={styles.NavigationGroup}>
+                          {/* 부제목 (e.g. Research areas) */}
+                          <span className={styles.NavigationLink}>
+                            {subTitles[index]}
+                          </span>
+                          <ul className={styles.NavigationGroup_items}>
+                            {subMenuItems[index].map((subItem, subIndex) =>
+                              <li className={styles.NavigationGroup_items_item} key={subItem.id}>
+                                <Link
+                                  className={styles.NavigationLink}
+                                  to={`/${item}/${subItem.title}`}
+                                >
+                                  <span className={styles.NavigationLink_icon}>
+                                    <picture>
+                                      <img class="Image" dataImageSize="smallIcon" alt={`${subItem.title}_icon`} src={subItem.icon}></img>
+                                    </picture>
+                                  </span>
+                                  {subItem.title}
+                                </Link>
+                              </li>
+                            )}
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                );
+              else // 하위 메뉴가 없을 때
+                return (
+                  <div className={styles.NavigationItem} key={index}>
+                    <div className={styles.NavigationItem_text}>
+                      <Link
+                        className={styles.NavigationItem_text_link}
+                        to={`/${item}`}
+                        key={index}
+                      >
+                        {item}
+                      </Link>
+                    </div>
+                  </div>
+                );
+            })}
           </div>
         </div>
       </div>
       {/* Hamburger Menu */}
       <Hamburger
-        navData={recievedNavData}
+        menuItems={menuItems}
         isMenuOpen={isMenuOpen}
       />
     </div>

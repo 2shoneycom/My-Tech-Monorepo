@@ -13,8 +13,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Articles Search" element={<ArticleSearch />} />
-        <Route path="/research-areas/:category" element={<SubCategory />} />
+        <Route path="/Article Search" element={<ArticleSearch />} />
+        <Route path="/Blog/:category" element={<SubCategory />} />
         <Route path="/post/:id" element={<BlogPost />} />
       </Routes>
     </Router>

@@ -7,14 +7,20 @@ import Hero_typeA from "@sean/hero-static-type-a";
 import SearchLandingPage from "@sean/searchlandingpage-main";
 import Footer from "@sean/footer-type-a";
 
-import logoImg from "../assets/images/logo.png";
+// 데이터 로드
+import headerData from "../data/headerData";
 
 function ArticleSearch() {
   const [filteredResults, setFilteredResults] = useState(dummyPosts);
 
   return (
     <div className={styles.top_container}>
-      <Header logoImg={logoImg}/>
+      <Header
+        logoImg={headerData.logoImg}
+        menuItems={headerData.menuItems}
+        subMenuItems={headerData.subMenuItems}
+        subTitles={headerData.subTitles}
+      />
       <Hero_typeA />
       <SearchLandingPage results={filteredResults}/>
       <Footer />

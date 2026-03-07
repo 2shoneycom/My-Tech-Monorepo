@@ -2,8 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "../css/hamburger.module.css";
 
-function Hamburger({ navData, isMenuOpen }) {
-  const [navItemList, setNavItemList] = useState(navData.itemList_eng);
+function Hamburger({ menuItems, isMenuOpen }) {
   const hamburgerRef = useRef(null);
 
   useEffect(() => {
@@ -20,13 +19,13 @@ function Hamburger({ navData, isMenuOpen }) {
   return (
     <div ref={hamburgerRef} className={hamburgerClass}>
       <div className={styles.hamburger_navigatior}>
-        {navItemList.map((navItem, index) =>
+        {menuItems.map((item, index) =>
           <Link
             className={styles.hamburger_navigatior_item}
-            to={`/${navData.linkList[navItem]}`}
+            to={`/${item}`}
             key={index}
           >
-            <div className={styles.hamburger_navigator_text}>{navItem}</div>
+            <div className={styles.hamburger_navigator_text}>{item}</div>
           </Link>
         )}
       </div>
