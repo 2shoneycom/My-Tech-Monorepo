@@ -1,5 +1,6 @@
 import monoRepoImg1 from '../assets/images/monorepo_1.png';
-import clipPathImg1 from '../assets/images/clip-path_1.png'
+import clipPathImg1 from '../assets/images/clip-path_1.png';
+import infixToPrefixImg1 from '../assets/images/infix_to_prefix_1.png';
 
 export const dummyPosts = [
   // 중위 표기식을 후위 표기식으로 변경하기
@@ -8,16 +9,33 @@ export const dummyPosts = [
     category: "Algorithm", 
     tag: ["Stack", "String"],
     title: "중위 표기식을 후위 표기식으로 변경하기",
-    subTitle: "자료구조 스택을 활용하여 중위 표기식을 후위 표기식으로 변경하는 방법",
+    subTitle: "스택 자료구조를 활용하여 중위 표기식을 후위 표기식으로 변경하는 방법",
     author: "Sean Lee",
     date: "March 6, 2026",
     readDuration: 8,
+    thumbnail: infixToPrefixImg1,
     content: `
       <p>
-        중위 표기식은 인간이 사용하는 방식, 후위 표기식은 저쩌고~ 내용 넣고
+        중위 표기식이란 사람이 가장 익숙하게 사용하는 방식으로 연산자가 피연산자 가운데에 위치한다. 후위 표기식은 연산자가 피연산자 뒤에 위치하는 식으로 컴퓨터에게 있어서, 스택 구조를 이용해 왼쪽부터 순서대로 계산할 수 있어 매우 효율적이라는 점이 특징이다.
       </p>
+      <div class="Enhancement" data-align-center=>
+        <div class="Enhancement-item">
+          <figure class="Figure">
+            <div class="Figure-media">
+              <picture>
+                <img class="Image" data-image-size="figureLarge" alt="monorepo_1.png" src=${infixToPrefixImg1}>
+              </picture>
+            </div>
+            <div class="Figure-content">
+              <figcaption class="Figure-caption">
+                중위 표기식과 후위 표기식
+              </figcaption>
+            </div>
+          </figure>
+        </div>
+      </div>
       <p>
-        스택을 사용하여 구현한다.
+        중위 표기식을 후위 표기식으로 변환하기 위해서는 보통 스택이라는 자료구조를 사용한다. 
       </p>
       <h2>
         <p>변환 규칙</p>
