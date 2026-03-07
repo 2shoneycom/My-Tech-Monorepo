@@ -57,7 +57,7 @@ function ArticlePage({ article_category, article_headLine, article_subHeadLine, 
                   Share
                 </Link>
               </div>
-              <ul className={styles.ActionBar_items}>
+              <ul className={`${styles.ActionBar_items} ${styles.hidden}`}>
                 {/* 나중에 구현하자 */}
               </ul>
             </div>

@@ -4,6 +4,10 @@ img {
   max-width: 100%;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .ArticlePage_main {
   position: relative;
   padding-bottom: 25px;
@@ -238,7 +242,7 @@ img {
 }
 
 .ActionBar_items {
-  display: none;
+  /* display: none; */
 
   position: fixed;
   width: 260px;
