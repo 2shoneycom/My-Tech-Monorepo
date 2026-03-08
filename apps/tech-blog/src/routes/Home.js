@@ -9,6 +9,7 @@ import Footer from '@sean/footer-type-a';
 
 // 데이터 로드
 import headerData from "../data/headerData";
+import footerData from "../data/footerData";
 import { dummyPosts } from "../data/dummyPosts";
 
 const researchAreaDataSample = [
@@ -299,13 +300,14 @@ function Home() {
         menuItems={headerData.menuItems}
         subMenuItems={headerData.subMenuItems}
         subTitles={headerData.subTitles}
+        socialItems={footerData.socialItems}
       />
       <HeroSlide data={heroData} />
       <AreaSection data={researchAreaDataSample} />
       <Fromtheblog data={fromtheblogDataSample} />
       <FeaturedNews data={featuredNewsDataSample} />
       <Publications data={PublicationsDataSample} />
-      <Footer />
+      <Footer/>
     </div>
   );
 }

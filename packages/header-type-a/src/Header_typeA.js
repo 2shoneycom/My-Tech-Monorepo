@@ -4,7 +4,7 @@ import styles from "./css/header_typeA.module.css";
 import useSmartHeader from "./customHooks/useSmartHeader";
 import Hamburger from "./components/Hamburger";
 
-function Header_typeA({ logoImg, menuItems, subMenuItems, subTitles }) {
+function Header_typeA({ logoImg, menuItems, subMenuItems, subTitles, socialItems}) {
   /* [Hamburger Menu] */
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -90,7 +90,7 @@ function Header_typeA({ logoImg, menuItems, subMenuItems, subTitles }) {
                                 >
                                   <span className={styles.NavigationLink_icon}>
                                     <picture>
-                                      <img class="Image" dataImageSize="smallIcon" alt={`${subItem.title}_icon`} src={subItem.icon}></img>
+                                      <img className={styles.Image} dataImageSize="smallIcon" alt={`${subItem.title}_icon`} src={subItem.icon}></img>
                                     </picture>
                                   </span>
                                   {subItem.title}
@@ -124,6 +124,9 @@ function Header_typeA({ logoImg, menuItems, subMenuItems, subTitles }) {
       {/* Hamburger Menu */}
       <Hamburger
         menuItems={menuItems}
+        subMenuItems={subMenuItems}
+        socialItems={socialItems}
+        subTitles={subTitles}
         isMenuOpen={isMenuOpen}
       />
     </div>
