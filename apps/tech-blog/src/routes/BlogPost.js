@@ -9,6 +9,7 @@ import { getPostById } from "../api/posts";
 
 // 데이터 로드
 import headerData from "../data/headerData";
+import footerData from "../data/footerData";
 
 function BlogPost() {
   const { id } = useParams();
@@ -43,6 +44,7 @@ function BlogPost() {
         menuItems={headerData.menuItems}
         subMenuItems={headerData.subMenuItems}
         subTitles={headerData.subTitles}
+        socialItems={footerData.socialItems}
       />
       {error || !postData ?
         <h2>Something went wrong</h2>

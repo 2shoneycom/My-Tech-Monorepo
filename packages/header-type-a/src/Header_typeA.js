@@ -90,7 +90,7 @@ function Header_typeA({ logoImg, menuItems, subMenuItems, subTitles, socialItems
                                 >
                                   <span className={styles.NavigationLink_icon}>
                                     <picture>
-                                      <img className={styles.Image} dataImageSize="smallIcon" alt={`${subItem.title}_icon`} src={subItem.icon}></img>
+                                      <img className={styles.Image} dataimagesize="smallIcon" alt={`${subItem.title}_icon`} src={subItem.icon}></img>
                                     </picture>
                                   </span>
                                   {subItem.title}

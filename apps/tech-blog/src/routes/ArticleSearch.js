@@ -8,7 +8,8 @@ import SearchLandingPage from "@sean/searchlandingpage-main";
 import Footer from "@sean/footer-type-a";
 
 // 데이터 로드
-import headerData from "../data/headerData";
+import headerData from "../data/headerData"; 
+import footerData from "../data/footerData";
 
 function ArticleSearch() {
   const [filteredResults, setFilteredResults] = useState(dummyPosts);
@@ -20,9 +21,10 @@ function ArticleSearch() {
         menuItems={headerData.menuItems}
         subMenuItems={headerData.subMenuItems}
         subTitles={headerData.subTitles}
+        socialItems={footerData.socialItems}
       />
       <Hero_typeA />
-      <SearchLandingPage results={filteredResults}/>
+      <SearchLandingPage results={filteredResults} />
       <Footer />
     </div>
   );

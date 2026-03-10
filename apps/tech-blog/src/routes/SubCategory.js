@@ -9,6 +9,7 @@ import Footer from '@sean/footer-type-a';
 // 데이터 로드
 import headerData from "../data/headerData";
 import researchAreaData from "../data/researchAreaData";
+import footerData from "../data/footerData";
 import { useParams } from "react-router-dom";
 
 const heroContents = researchAreaData.researchAreaData;
@@ -33,6 +34,7 @@ function SubCategory() {
         menuItems={headerData.menuItems}
         subMenuItems={headerData.subMenuItems}
         subTitles={headerData.subTitles}
+        socialItems={footerData.socialItems}
       />
       <Hero_typeB
         img={currentHero.icon}

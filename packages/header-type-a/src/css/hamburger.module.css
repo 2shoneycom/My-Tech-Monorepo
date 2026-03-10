@@ -6,10 +6,39 @@
   top: 100%;
   left: 0;
   z-index: 90;
-  width: 100%;       
+  width: 100%;
   max-width: 320px;
 
   transition: left 0.1s ease-in-out;
+}
+
+.Page_header_hamburger_menu {
+  width: 360px;
+  height: 100vh;
+  max-width: 100%;
+  background: var(--headerMenuBgColor);
+  border-top: 1px solid var(--headerBorderColor);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 90;
+
+  transition: left 0.1s ease-in-out;
+
+  /* width: 360px;
+  height: 100vh;
+  max-width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  overflow: hidden;
+  overflow-y: scroll;
+  visibility: visible;
+  background: var(--headerMenuBgColor);
+  border-top: 1px solid var(--headerBorderColor);
+  color: var(--headerMenuTextColor);
+  transition: left .25s;
+  z-index: 50; */
 }
 
 .hamburger_hidden {
@@ -23,7 +52,7 @@
 }
 
 .hamburger_navigatior_item {
-  margin: 0 1em;      
+  margin: 0 1em;
   border-bottom: 1px solid var(--headerBorderColor);
 }
 
@@ -42,4 +71,286 @@
   .hamburger_outer_box {
     display: none;
   }
+}
+
+.Page_header_hamburger_menu_wrapper {}
+
+.Page_header_hamburger_menu_content {
+  padding: 0 0 90px;
+}
+
+.Navigation {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.Navigation_items {
+  width: 100%;
+}
+
+.Navigation_items_item {
+  margin: 0 20px;
+  border-bottom: 1px solid var(--headerBorderColor);
+}
+
+.NavigationItem {
+  position: relative;
+}
+
+@media only screen and (max-width: 1023px) {
+  .NavigationItem {
+    position: static;
+  }
+}
+
+.NavigationItem_text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--primaryTextColor);
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--label-3);
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.NavigationItem_text a {
+  display: block;
+  padding: 20px 20px 20px 0;
+  width: 100%;
+}
+
+.NavigationItem_more {
+  width: 40px;
+  height: 48px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+}
+
+.NavigationItem_more button {
+  display: block;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: currentColor;
+}
+
+.NavigationItem_more svg {
+  width: 8px;
+  height: 8px;
+  fill: currentColor;
+}
+
+.NavigationItem_items {
+  display: none;
+  padding: 0;
+  text-align: left;
+}
+
+@media only screen and (max-width: 1023px) {
+  .NavigationItem_items {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--headerBgColor);
+    overflow-y: scroll;
+    transform: translateX(-100%);
+    transition: transform 250ms;
+    visibility: hidden;
+  }
+}
+
+/* 로직 추가 필요 */
+.submenuOpened .NavigationItem_items {
+  display: block;
+}
+
+@media only screen and (max-width: 1023px) {
+  .submenuOpened .NavigationItem_items {
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+.NavigationItem_items_item {}
+
+@media only screen and (max-width: 1023px) {
+  .NavigationItem_items_item {
+    border-top: 1px solid #eaeded;
+  }
+
+  .NavigationItem_items_item:not([data-back-link]) {
+    padding: 20px;
+  }
+}
+
+.NavigationItem_items .NavigationBackLink {
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--label-3);
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.NavigationItem_items .NavigationBackLink:hover {
+  color: var(--primaryColor);
+  text-decoration: none;
+}
+
+.NavigationItem_items .NavigationBackLink svg {
+  width: 10px;
+  height: 18px;
+}
+
+.NavigationGroup {}
+
+.NavigationItem .NavigationGroup>span.NavigationLink {
+  color: var(--color-secondary-text);
+  margin-bottom: 20px;
+  padding: 0;
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--title-6);
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.NavigationItem .NavigationLink {
+  width: 100%;
+  padding: 10px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--primaryTextColor);
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--label-4);
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.NavigationItem .NavigationGroup_items {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+.NavigationGroup_items_item {}
+
+.NavigationItem .NavigationGroup_items_item .NavigationLink {
+  padding: 0;
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.NavigationItem .NavigationLink_icon {
+  width: 17px;
+  height: 17px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.Page_header_socialBar {
+  margin: 20px 20px 0;
+}
+
+.Page_header_hamburger_menu .SocialBar {
+  margin-top: 20px;
+}
+
+.SocialBar_heading {
+  display: none;
+  margin-bottom: 15px;
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--label-4);
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.Page_header_hamburger_menu .SocialBar_items {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.SocialBar_items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+@media only screen and (min-width: 375px) {
+  .SocialBar_items {
+    flex-wrap: unset;
+  }
+}
+
+.SocialBar_items_item {
+  margin: 0 10px 10px 0;
+  flex-shrink: 0;
+}
+
+.Page_header_hamburger_menu .SocialBar_items_item {
+  margin: 0;
+}
+
+.SocialLink {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primaryColor);
+  border-radius: 50%;
+  color: #fff;
+}
+
+.Page_header_hamburger_menu .SocialBar_items_item .SocialLink {
+  width: 24px;
+  height: 24px;
+  background: none;
+  border-radius: 0;
+  color: var(--primaryColor);
+}
+
+.SocialLink svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+}
+
+.Page_header_hamburger_menu .SocialBar_items_item .SocialLink svg {
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  fill: currentColor;
+}
+
+.sr_only {
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  overflow: hidden;
 }
