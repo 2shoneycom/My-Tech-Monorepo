@@ -14,7 +14,7 @@ function Hero_typeB({ img, category, title, description }) {
           </div>
           <div className={styles.HeadingLeadC_text}>
             <div className={styles.HeadingLeadC_category}>
-              <span className={styles.Link}>{category || "Research Area"}</span>
+              <span className={styles.Link}>{category}</span>
             </div>
             <h1 className={styles.HeadingLeadC_title}>
               {title || "Automated resoning"}

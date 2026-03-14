@@ -15,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Article Search" element={<ArticleSearch />} />
         <Route path="/Blog/:category" element={<SubCategory />} />
+        <Route path="/Essay" element={<SubCategory fixedCategory="Essay" />} />
         <Route path="/post/:id" element={<BlogPost />} />
       </Routes>
     </Router>

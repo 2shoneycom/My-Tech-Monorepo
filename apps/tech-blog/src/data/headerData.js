@@ -1,5 +1,5 @@
 import logoImg from "../assets/images/logo.png";
-import researchAreaData from "./researchAreaData";
+import researchAreaData from "./categoryData";
 
 const menuItems = ["Article Search", "Blog", "Projects", "Essay"];
 const subMenuItems = [

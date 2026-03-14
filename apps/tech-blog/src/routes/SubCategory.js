@@ -8,14 +8,14 @@ import Footer from '@sean/footer-type-a';
 
 // 데이터 로드
 import headerData from "../data/headerData";
-import researchAreaData from "../data/researchAreaData";
+import categoryData from "../data/categoryData";
 import footerData from "../data/footerData";
 import { useParams } from "react-router-dom";
 
-const heroContents = researchAreaData.researchAreaData;
-
-function SubCategory() {
-  const { category } = useParams();
+function SubCategory({ fixedCategory }) {
+  const params = useParams();
+  const category = fixedCategory === undefined ? params.category : fixedCategory;
+  const heroContents = fixedCategory === undefined ? categoryData.researchAreaData : categoryData.extraCategoryData;
 
   // 현재 URL 파라미터와 일치하는 Hero 콘텐츠 찾기
   const currentHero = heroContents.find(
@@ -38,7 +38,7 @@ function SubCategory() {
       />
       <Hero_typeB
         img={currentHero.icon}
-        category="Research Area"
+        category={fixedCategory === null ? "Research Area" : null}
         title={currentHero.title}
         description={currentHero.description}
       />
