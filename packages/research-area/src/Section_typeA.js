@@ -34,7 +34,7 @@ function Section_typeA({ data = [] }) {
                 >
                   <div className={styles.ResearchAreaCard_media}>
                     <picture>
-                      <img data-image-size="mediumIcon" alt={`${item.title}.svg`} width="48" height="48" src={item.media_source} />
+                      <img data-image-size="mediumIcon" alt={`${item.title}.svg`} width="48" height="48" src={item.icon} />
                     </picture>
                   </div>
                   <div className={styles.ResearchAreaCard_content}>

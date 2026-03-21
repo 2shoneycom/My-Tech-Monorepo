@@ -10,6 +10,7 @@ import Footer from '@sean/footer-type-a';
 // 데이터 로드
 import headerData from "../data/headerData";
 import footerData from "../data/footerData";
+import categoryData from "../data/categoryData";
 import { dummyPosts } from "../data/dummyPosts";
 
 const researchAreaDataSample = [
@@ -303,7 +304,7 @@ function Home() {
         socialItems={footerData.socialItems}
       />
       <HeroSlide data={heroData} />
-      <AreaSection data={researchAreaDataSample} />
+      <AreaSection data={[...categoryData.researchAreaData, ...categoryData.extraCategoryData]} />
       <Fromtheblog data={fromtheblogDataSample} />
       <FeaturedNews data={featuredNewsDataSample} />
       <Publications data={PublicationsDataSample} />
