@@ -38,7 +38,7 @@ function PromoF({
             {article_subHeadLine}
           </div>
           <div className={styles.PromoF_category}>
-            <Link className={styles.Link} to={`/research-areas/${article_category}`}>
+            <Link className={styles.Link} to={`/Blog/${article_category}`}>
               {article_category}
             </Link>
           </div>
