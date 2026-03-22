@@ -33,7 +33,7 @@ function Publications({ data = [] }) {
                       </span>
                     </div>
                     <div className={styles.PromoF_category}>
-                      <Link className={styles.Link} to={`/research-areas/${item.category}`}>{item.category}</Link>
+                      <Link className={styles.Link} to={`/Blog/${item.category}`}>{item.category}</Link>
                     </div>
                   </div>
                 </div>
