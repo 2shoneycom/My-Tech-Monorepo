@@ -1,6 +1,7 @@
 .PromoA .PromoA_media {
   position: relative;
   margin-bottom: 20px;
+  border: 1px solid gray;
 }
 .PromoA_media a {
   display: block;

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./css/fromtheblog.module.css";
 import PromoA from '@sean/promo-a';
 
-function Fromtheblog({ data = [] }) {
+function Fromtheblog({ viewAllLik, data = [] }) {
   return (
     <div className={styles.top_container}>
       <div className={styles.fromtheblog_heading}>
@@ -19,7 +19,7 @@ function Fromtheblog({ data = [] }) {
           <div className={styles.fromtheblog_heading_text}>
             <div className={styles.fromtheblog_header_wrapper}>
               <h2 className={styles.fromtheblog_header}>From the blog</h2>
-              <Link className={styles.fromtheblog_header_button} to="/">View all</Link>
+              <Link className={styles.fromtheblog_header_button} to={viewAllLik}>View all</Link>
               <div className={styles.fromtheblog_header_description}>
                 Technical deep-dives and perspectives from our scientists.
               </div>

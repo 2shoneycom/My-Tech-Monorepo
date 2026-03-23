@@ -5,15 +5,15 @@ function PromoA({ item, detailsOn = true, descciptOn = true, categoryOn = true, 
   return (
     <div className={styles.PromoA}>
       <div className={`${styles.PromoA_media} ${mediaClassName || ''}`}>
-        <Link className={styles.Link} to={`${item.link}`}>
+        <Link className={styles.Link} to={`/post/${item.title}`}>
           <picture>
-            <img className="Image" data-image-size="promoMedium" alt={`${item.title} + _image`} src={item.media_source} />
+            <img className="Image" data-image-size="promoMedium" alt={`${item.title} + _image`} src={item.thumbnail} />
           </picture>
         </Link>
       </div>
       <div className={styles.PromoA_content}>
         <div className={`${styles.PromoA_title} ${titleClassName || ''}`}>
-          <Link className={styles.Link} to={`${item.link}`}>
+          <Link className={styles.Link} to={`/post/${item.title}`}>
             {item.title}
           </Link>
         </div>
@@ -25,7 +25,7 @@ function PromoA({ item, detailsOn = true, descciptOn = true, categoryOn = true, 
               </div>
               <div className={styles.PromoA_duration}>
                 {/* ::before */}
-                {item.duration}
+                {item.readDuration}
               </div>
             </div> :
             null
@@ -33,14 +33,14 @@ function PromoA({ item, detailsOn = true, descciptOn = true, categoryOn = true, 
         {
           descciptOn ?
             <div className={styles.PromoA_description}>
-              {item.description}
+              {item.subTitle}
             </div> :
             null
         }
         {
           categoryOn ?
             <div className={styles.PromoA_category}>
-              <Link className={styles.Link} to={`${item.category}`}>
+              <Link className={styles.Link} to={`/Blog/${item.category}`}>
                 {item.category}
               </Link>
             </div> :

@@ -13,58 +13,6 @@ import footerData from "../data/footerData";
 import categoryData from "../data/categoryData";
 import { dummyPosts } from "../data/dummyPosts";
 
-const fromtheblogDataSample = [
-  {
-    id: 1,
-    title: "Dialogue Boost: How Amazon is using AI to enhance TV and movie dialouge",
-    date: "December 10, 2025",
-    duration: "5 min read",
-    description: "New audio-processing technology is making entertainment more accessible for millions of viewers.",
-    category: "Conversational AI",
-    media_source: "https://assets.amazon.science/dims4/default/2416f34/2147483647/strip/true/crop/1319x740+0+2/resize/535x300!/quality/90/?url=http%3A%2F%2Famazon-topics-brightspot.s3.amazonaws.com%2Fscience%2Fb4%2Fca%2Fb036be414d479118bef24d24e573%2Ftabletwithdialogueboostmenu.jpeg",
-    link: "blog/1",
-  },
-  {
-    id: 2,
-    title: "Amazon Nova Forge: \"Open training\” paradigm that empowers everyone to build their own frontier AI",
-    date: "December 8, 2025",
-    duration: "8 min read",
-    description: "unknown",
-    category: "Conversational AI",
-    media_source: "https://assets.amazon.science/dims4/default/134533e/2147483647/strip/true/crop/4096x2289+0+221/resize/340x190!/format/webp/quality/90/?url=http%3A%2F%2Famazon-topics-brightspot.s3.amazonaws.com%2Fscience%2F53%2F2e%2Fb74300fd451ead164ef018c6cc12%2Frohit-headshot-2025.jpg",
-    link: "blog/2",
-  },
-  {
-    id: 3,
-    title: "AutoGluon assistant: Zero-code AutoML through multiagent collaboration",
-    date: "December 5, 2025",
-    duration: "6 min read",
-    description: "unknown",
-    category: "Machine learning",
-    media_source: "https://assets.amazon.science/dims4/default/d592b24/2147483647/strip/true/crop/1920x1073+0+4/resize/340x190!/format/webp/quality/90/?url=http%3A%2F%2Famazon-topics-brightspot.s3.amazonaws.com%2Fscience%2Ff3%2F5c%2F7482b7fe4053bb53addf0a1d7505%2Ffigure1-autogluon-16x9.png",
-    link: "blog/3",
-  },
-  {
-    id: 4,
-    title: "AI-native 6G: From network to intelligence fabrics",
-    date: "December 1, 2025",
-    duration: "8 min read",
-    description: "unknown",
-    category: "Cloud and systems",
-    media_source: "https://assets.amazon.science/dims4/default/ec18fe6/2147483647/strip/true/crop/1834x1025+64+55/resize/340x190!/format/webp/quality/90/?url=http%3A%2F%2Famazon-topics-brightspot.s3.amazonaws.com%2Fscience%2F67%2Fca%2Feb90550e4ba4a05fcaa14b9e403a%2F6g-figure.jpg",
-    link: "blog/4",
-  },
-  {
-    id: 5,
-    title: "UsingLLMs to improve Amazon product listings",
-    date: "November 28, 2025",
-    duration: "4 min read",
-    description: "unknown",
-    category: "Conversational AI",
-    media_source: "https://assets.amazon.science/dims4/default/b21c6e6/2147483647/strip/true/crop/1920x1073+0+4/resize/340x190!/format/webp/quality/90/?url=http%3A%2F%2Famazon-topics-brightspot.s3.amazonaws.com%2Fscience%2Fb9%2F09%2F6943746642fcb8385eac3806b68b%2Fcatalog-refresh-16x9.png",
-    link: "blog/5",
-  },
-];
 const featuredNewsDataSample = [
   {
     id: 1,
@@ -212,7 +160,9 @@ const PublicationsDataSample = [
 
 function Home() {
   // 히어로 슬라이드쇼 데이터 불러오기 (최신순 5개)
-  const heroData = dummyPosts.slice(0, 4);
+  const heroData = dummyPosts.slice(0, 5);
+  const fromtheblogData = dummyPosts.slice(0, 5);
+  const featuredNewsDataSample = dummyPosts.slice(0, 5);
 
   return (
     <div className={styles.top_container}>
@@ -225,7 +175,10 @@ function Home() {
       />
       <HeroSlide data={heroData} />
       <AreaSection data={[...categoryData.researchAreaData, ...categoryData.extraCategoryData]} />
-      <Fromtheblog data={fromtheblogDataSample} />
+      <Fromtheblog 
+        viewAllLik="Article Search"
+        data={fromtheblogData} 
+      />
       <FeaturedNews data={featuredNewsDataSample} />
       <Publications data={PublicationsDataSample} />
       <Footer/>
