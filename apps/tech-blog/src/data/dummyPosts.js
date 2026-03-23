@@ -3,8 +3,313 @@ import clipPathImg1 from '../assets/images/clip-path_1.png';
 import infixToPrefixImg1 from '../assets/images/infix_to_prefix_1.png';
 import vanilaCSSvsFrameworkImg1 from '../assets/images/vanilacss_vs_framework_1.png';
 import vanilaCSSvsFrameworkImg2 from '../assets/images/vanilacss_vs_framework_2.jpeg';
+import graphImg1 from '../assets/images/graph_1.png';
+import graphImg2 from '../assets/images/graph_2.png';
+import graphImg3 from '../assets/images/graph_3.png';
+import graphImg4 from '../assets/images/graph_4.png';
+import graphImg5 from '../assets/images/graph_5.png';
 
 export const dummyPosts = [
+  /*
+  {
+    id: "에라토스테네스의 체",
+    category: "Algorithm",
+    tag: ["Math", "Prime Number"],
+    title: "에라토스테네스의 체",
+    subTitle: "",
+    author: "Sean Lee",
+  },
+  {
+    id: "그리디",
+    category: "Algorithm",
+    tag: ["Greedy"],
+    title: "그리디",
+    subTitle: "",
+    author: "Sean Lee",
+  },
+  {
+    id: "이진 탐색",
+    category: "Algorithm",
+    tag: ["Binary Search"],
+    title: "이진 탐색",
+    subTitle: "",
+    author: "Sean Lee",
+  },
+  {
+    id: "Heap의 기본",
+    category: "Algorithm",
+    tag: ["Data Structure", "Heap"],
+    title: "Heap의 기본",
+    subTitle: "",
+    author: "Sean Lee",
+  },
+  {
+    id: "Stack의 기본",
+    category: "Algorithm",
+    tag: ["Data Structure", "Stack"],
+    title: "Stack의 기본",
+    subTitle: "",
+    author: "Sean Lee",
+  },
+  {
+    id: "DP(Bottom-up)",
+    category: "Algorithm",
+    tag: ["Dynamic Programming"],
+    title: "DP(Bottom-up)",
+    subTitle: "",
+    author: "Sean Lee",
+  },
+  {
+    id: "DP(Top-down)",
+    category: "Algorithm",
+    tag: ["Dynamic Programming"],
+    title: "DP(Top-down)",
+    subTitle: "",
+    author: "Sean Lee",
+  },
+  {
+    id: "그래프의 탐색(BFS, DFS)",
+    category: "Algorithm",
+    tag: ["Graph"],
+    title: "그래프의 탐색(BFS, DFS)",
+    subTitle: "",
+    author: "Sean Lee",
+  },*/
+  // 그래프의 구현
+  {
+    id: "그래프의 구현",
+    category: "Algorithm",
+    tag: ["Graph"],
+    title: "그래프의 구현",
+    subTitle: "가장 널리 쓰이는 자료구조이자 알고리즘, 그래프의 개념과 구현 방법을 알아보자",
+    author: "Sean Lee",
+    date: "March 22, 2026",
+    readDuration: 8,
+    thumbnail: graphImg1,
+    content: `
+      <p>
+        그래프는 데이터를 나타내는 하나의 방법, 자료구조 중 하나이다. 이 자료구조의 특징은 <b>데이터들의 연결</b>을 나타낸다는 것이다. 네트워크를 생각하면 편할 것 같다. 일상 속에서는 지하철 노선도가 정말 딱 들어맞는 그래프의 예시이다. 
+      </p>
+      <div class="Enhancement" data-align-center=>
+        <div class="Enhancement-item">
+          <figure class="Figure">
+            <div class="Figure-media">
+              <picture>
+                <img class="Image" data-image-size="figureLarge" alt="monorepo_1.png" src=${graphImg1}>
+              </picture>
+            </div>
+            <div class="Figure-content">
+              <figcaption class="Figure-caption">
+                그래프의 대표적인 예시, 네트워크와 지하철 노선도
+              </figcaption>
+            </div>
+          </figure>
+        </div>
+      </div>
+      <br>
+      <h2>
+        <p>그래프를 이루는 것, 그래프의 구성</p>
+      </h2>
+      <p>
+        그래프는 노드(node 또는 vertex)와 간선(edge)으로 구성되어진다. 노드는 데이터가 위치한 지점 그 자체이고 간선은 해당 노드에서 다른 노드를 가리키는 포인터이다. 이해를 돕기 위해 아래 예시를 보자.
+      </p>
+      <div class="Enhancement" data-align-center=>
+        <div class="Enhancement-item">
+          <figure class="Figure">
+            <div class="Figure-media">
+              <picture>
+                <img class="Image" data-image-size="figureLarge" alt="monorepo_1.png" src=${graphImg2}>
+              </picture>
+            </div>
+            <div class="Figure-content">
+              <figcaption class="Figure-caption">
+                노드와 간선
+              </figcaption>
+            </div>
+          </figure>
+        </div>
+      </div>
+      <p>
+        노드1과 간선1이 있다고 하자. 간선1은 노드1으로부터 나오고 노드2를 가리키고 있다면 노드1에서 간선1을 타면 노드2로 갈 수 있는 것이다. 그래서 그래프는 여러 개의 노드와 그 노드들 사이를 서로 연결하고 있는 간선들이 존재하여 전체적으로 네트워크의 형상을 띄고있다.
+      </p>
+      <br>
+      <h2>
+        <p>그래프의 표현</p>
+      </h2>
+      <p>
+        그래프가 무엇인지는 알았다. 그렇다면 이 그래프를 코드 상으로 어떻게 표현하여 사용할 수 있을까? 크게 두 가지 방법이 있다.
+      </p>
+      <ol>
+        <li>인접 행렬(Adjacency Matrix)</li>
+        <li>인접 리스트(Adjacency List)</li>
+      </ol>
+      <p>
+        예시를 통해 알아보자. 먼저 우리가 표현하고 싶은 그래프는 다음과 같다.
+      </p>
+      <div class="Enhancement" data-align-center=>
+        <div class="Enhancement-item">
+          <figure class="Figure">
+            <div class="Figure-media">
+              <picture>
+                <img class="Image" data-image-size="figureLarge" alt="monorepo_1.png" src=${graphImg3}>
+              </picture>
+            </div>
+            <div class="Figure-content">
+              <figcaption class="Figure-caption">
+                그래프 예시
+              </figcaption>
+            </div>
+          </figure>
+        </div>
+      </div>
+      <p>
+        위 그래프를 첫 번째 방법, 인접 행렬로 표현하면 다음과 같이 표현할 수 있다. 1은 서로 간선으로 연결되어있음을 뜻하고 0은 연결되지 않았음을 의미한다.
+      </p>
+      <div class="Enhancement" data-align-center=>
+        <div class="Enhancement-item">
+          <figure class="Figure">
+            <div class="Figure-media">
+              <picture>
+                <img class="Image" data-image-size="figureLarge" alt="monorepo_1.png" src=${graphImg4}>
+              </picture>
+            </div>
+            <div class="Figure-content">
+              <figcaption class="Figure-caption">
+                인접 행렬
+              </figcaption>
+            </div>
+          </figure>
+        </div>
+      </div>
+      <p>
+        코드로는 다음과 같이 작성할 수 있다. (편의상 a, b, c, d, e를 0, 1, 2, 3, 4로 사용했다)
+      </p>
+      <div class="CodeBlock">
+        <div class="CodeBlock_header">
+          <span>C++</span>
+        </div>
+        <pre><code>bool edge[5][5];
+
+// a <-> b
+edge[0][1] = true;
+edge[1][0] = true;
+// a <-> c
+edge[0][2] = true;
+edge[2][0] = true;
+// a <-> d
+edge[0][3] = true;
+edge[3][0] = true;
+// b <-> d
+edge[1][3] = true;
+edge[3][1] = true;
+// c <-> e
+edge[2][4] = true;
+edge[4][2] = true;</code></pre>
+      </div>
+      <p>
+        다음으로, 위의 그래프를 인접 리스트 방식으로 나타내면 다음과 같다.
+      </p>
+      <div class="Enhancement" data-align-center=>
+        <div class="Enhancement-item">
+          <figure class="Figure">
+            <div class="Figure-media">
+              <picture>
+                <img class="Image" data-image-size="figureLarge" alt="monorepo_1.png" src=${graphImg5}>
+              </picture>
+            </div>
+            <div class="Figure-content">
+              <figcaption class="Figure-caption">
+                인접 리스트
+              </figcaption>
+            </div>
+          </figure>
+        </div>
+      </div>
+      <p>
+        이를 코드로 표현하면 다음과 같다.
+      </p>
+      <div class="CodeBlock">
+        <div class="CodeBlock_header">
+          <span>C++</span>
+        </div>
+        <pre><code>vector<int> edge[5];
+
+// a <-> b
+edge[0].push_back(1);
+edge[1].push_back(0);
+// a <-> c
+edge[0].push_back(2);
+edge[2].push_back(0);
+// a <-> d
+edge[0].push_back(3);
+edge[3].push_back(0);
+// b <-> d
+edge[1].push_back(3);
+edge[3].push_back(1);
+// c <-> e
+edge[2].push_back(4);
+edge[4].push_back(2);</code></pre>
+      </div>
+      <br>
+      <h2>
+        <p>
+          두 가지 구현 방식의 장단점 비교
+        </p>
+      </h2>
+      <p>
+        두 가지 구현 방식(인접 행렬, 인접 리스트)은 장단점이 명확하다. 먼저 인접 행렬의 장단점을 살펴보자.
+      </p>
+      <p>
+        인접 행렬의 장점은 다음과 같다.
+      </p>
+      <ul>
+        <li><b>‘특정 두 노드가 연결되어있는가’를 O(1) 속도로 알아낼 수 있다.</b><br>
+        이게 인접 행렬의 가장 강력한 무기이다. 예를 들어, a와 b노드가 연결되어있는가는 단순히 edge[a][b]에 접근하여 단번에 알아낼 수 있다.</li>
+        <li><b>사람이 보기에 편하다</b><br>
+        이걸 장점으로 보기에는 애매하지만, 사람에게는 장황하게 늘어져 표현된 인접 리스트보다는 인접 행렬이 눈에 더 잘 들어오는 것 같다.</li>
+      </ul>
+      <p>
+        인접 행렬의 단점은 다음과 같다.
+      </p>
+      <ul>
+        <li><b>메모리 낭비</b><br>
+        인접 행렬의 가장 큰 단점이다. 인접 행렬은 연결된 정보(1)뿐만 아니라 연결이 안되어있다는 정보(0)까지도 정보 포함하기때문에 무조건 NxN 만큼의 이차원 배열을 필요로 한다. 이것은 심각한 메모리 낭비를 초래한다.</li>
+      </ul>
+      <p>
+        인접 리스트의 장단점을 살펴보자. 인접 리스트의 장단점은 인접 행렬의 정반대이다.
+      </p>
+      <p>
+        인접 리스트의 장점은 다음과 같다.
+      </p>
+      <ul>
+        <li><b>메모리 낭비가 적다.</b><br>
+        인접 리스트는 오직 연결된 노드만을 리스트에 추가하기에 인접 행렬에 비해 메모리 낭비가 적다.</li>
+        <li><b>한 노드에 연결된 노드들을 전부 탐색하는 것은 인접 리스트가 유리하다.</b><br>
+        예를 들어, ‘a에 연결된 노드들을 전부 나열하시오’와 같은 문제는 인접 리스트로 해결하면 그저 edge[a]에 들어있는 내용물을 쭉 출력하면 그만이다. 하지만 인접 행렬같은 경우에는 edge[a][a]~edge[a][e]까지 전부 순회하며 1인지 0인지 확인해야한다. </li>
+      </ul>
+      <p>
+        인접 리스트의 단점은 인접 행렬의 장점을 생각하면 되므로 생략한다.
+      </p>
+      <br>
+      <h2>
+        <p>
+          결론: 언제 무엇을 사용할까?
+        </p>
+      </h2>
+      <p>
+        그래프의 두 가지 구현 방식을 알아보았다. 그렇다면 언제 어떤 구현 방식을 사용하면 좋을까?
+      </p>
+      <ul>
+        <li>그래프의 밀도가 낮은 경우 (간선의 수가 적은 경우)<br>
+        -> <b>인접 리스트</b>를 사용하는 것이 유리하다</li>
+        <li>그래프의 밀도가 높은 경우 (간선의 수가 많은 경우)<br>
+        -> <b>인접 행렬</b>을 사용하는 것이 유리하다</li>
+      </ul>
+      <p>
+        참고로 그래프는 보통 밀도가 낮다고 한다. 
+      </p>
+    `
+  },
   // 바닐라 CSS vs CSS 프레임워크
   {
     id: "바닐라 CSS vs CSS 프레임워크",
