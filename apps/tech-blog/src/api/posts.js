@@ -14,8 +14,7 @@ export const getPostById = async (id) => {
 };
 
 // 구간별 게시글 로드
-export const loadSlicedPosts = async (fromIdx, toIdx) => {
-  await new Promise((resolve) => setTimeout(resolve, 500));
+export const loadSlicedPosts = (fromIdx, toIdx) => {
 
   const slicedPosts = dummyPosts.slice(fromIdx, toIdx);
 
