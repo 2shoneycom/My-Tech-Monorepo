@@ -27,6 +27,7 @@
 @media only screen and (min-width: 1340px) {
   .top_contianer {
     max-width: var(--contentWidth);
+    min-width: var(--contentWidth);
     margin-left: auto;
     margin-right: auto;
   }

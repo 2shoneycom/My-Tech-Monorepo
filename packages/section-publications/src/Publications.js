@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './css/publications.module.css';
 
-function Publications({ data = [] }) {
+function Publications({ data = [], loadNext }) {
   return (
     <section className={styles.top_contianer}>
       {/* ::before */}
@@ -42,7 +42,7 @@ function Publications({ data = [] }) {
           )}
         </ul>
         <div className={styles.nextPage}>
-          <Link className={styles.Link} to='/'>Load more</Link>
+          <Link className={styles.Link} onClick={loadNext}>Load more</Link>
         </div>
       </div>
     </section>
