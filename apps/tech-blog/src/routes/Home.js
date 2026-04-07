@@ -55,7 +55,10 @@ function Home() {
       />
       <FeaturedNews data={featuredNewsData} />
       <Publications data={publicationsData} loadNext={loadNextPublications} />
-      <Footer />
+      <Footer 
+        logoImg={footerData.logoImg}
+        socialItems={footerData.socialItems}
+      />
     </div>
   );
 }
