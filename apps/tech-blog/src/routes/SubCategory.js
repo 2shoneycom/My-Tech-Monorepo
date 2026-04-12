@@ -43,7 +43,10 @@ function SubCategory({ fixedCategory }) {
         description={currentHero.description}
       />
       <Publications data={filteredPublications} />
-      <Footer />
+      <Footer 
+        logoImg={footerData.logoImg}
+        socialItems={footerData.socialItems}
+      />
     </div>
   );
 }

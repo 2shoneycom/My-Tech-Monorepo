@@ -25,7 +25,10 @@ function ArticleSearch() {
       />
       <Hero_typeA />
       <SearchLandingPage results={filteredResults} />
-      <Footer />
+      <Footer 
+        logoImg={footerData.logoImg}
+        socialItems={footerData.socialItems}
+      />
     </div>
   );
 }

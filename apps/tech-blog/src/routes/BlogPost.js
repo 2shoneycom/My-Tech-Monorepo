@@ -60,7 +60,10 @@ function BlogPost() {
           article_tags={postData.tag}
         />
       }
-      <Footer />
+      <Footer 
+        logoImg={footerData.logoImg}
+        socialItems={footerData.socialItems}
+      />
     </div>
   );
 }
