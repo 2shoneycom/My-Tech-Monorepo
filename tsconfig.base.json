@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "strict": true,            // 타입 체크를 엄격하게 (이게 TS를 쓰는 이유)
+    "esModuleInterop": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "jsx": "react-jsx",        // 리액트 환경 필수 설정
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@repo/ui/*": ["packages/ui/*"] // 패키지 경로를 별칭으로 지정 가능
+    }
+  }
+}

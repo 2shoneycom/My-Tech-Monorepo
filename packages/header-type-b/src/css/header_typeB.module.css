@@ -1,0 +1,119 @@
+.header {
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+}
+
+.container {
+  padding-inline: 50px;
+}
+
+.navWrapper {
+  margin-block: 15px;
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  width: 150px;
+  height: 40px;
+  border: 1px dotted black;
+}
+
+.primaryNav {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menuList {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menuItem {}
+
+.menuItem button {
+  all: unset;
+  padding-inline: 15px;
+  padding-block: 10px;
+  border-radius: 10px;
+}
+
+.menuItem button:hover {}
+
+.menuButton {
+  all: unset;
+  padding-inline: 15px;
+  padding-block: 10px;
+  border-radius: 10px;
+}
+
+.menuButton:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.buttonContent {
+  display: flex;
+  align-items: center;
+}
+
+.arrowIcon {
+  margin-left: 5px;
+}
+
+#arrowIcon {
+  width: 10px;
+  height: 10px;
+  border: 1px dotted black;
+}
+
+.label {
+  font-family: "Pretendard Variable", Figtree, "IBM Plex Sans JP", "Pretendard JP Variable", "Pretendard Std Variable";
+  font-size: 14px;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  border: 0.5px solid lightgray;
+}
+
+.aiBadge {}
+
+#aiIcon {
+  width: 100px;
+  height: 25px;
+  border: 1px dotted black;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.secondaryNav {
+  display: flex;
+  align-items: center;
+}
+
+.registerBtn {
+  background-color: rgb(0, 186, 186) !important;
+  color: white !important;
+}
+
+.registerBtn:hover {
+  background-color: rgb(0, 200, 200) !important;
+}
+
+#helpIcon {
+  width: 20px;
+  height: 20px;
+  border: 1px dotted black;
+}
+
+#hamburgerIcon {
+  width: 10px;
+  height: 15px;
+  border: 1px dotted black;
+}
