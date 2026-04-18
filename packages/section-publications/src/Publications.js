@@ -7,7 +7,7 @@ function Publications({ data = [], loadNext }) {
       {/* ::before */}
       <div className={styles.header_wrapper}>
         <h2 className={styles.header}>Publications</h2>
-        <Link className={styles.header_button} to='/Articles Search'>View all</Link>
+        <Link className={styles.header_button} to='/Article Search'>View all</Link>
       </div>
       <div className={styles.body}>
         <ul className={styles.body_items}>
