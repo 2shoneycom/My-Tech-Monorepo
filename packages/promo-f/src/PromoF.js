@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import styles from './css/promoF.module.css';
 
 function PromoF({ 
@@ -12,13 +12,13 @@ function PromoF({
   return (
     <div className={styles.PromoF}>
       <div className={styles.PromoF_title}>
-        <Link className={styles.Link} to={`/post/${article_headLine}`}>
+        <Link className={styles.Link} href={`/post/${article_headLine}`}>
           {article_headLine}
         </Link>
       </div>
       <div className={styles.PromoF_details}>
         <div className={styles.PromoF_authors}>
-          <Link className={styles.Link} to={`/author/${article_author}`}>{article_author}</Link>
+          <Link className={styles.Link} href={`/author/${article_author}`}>{article_author}</Link>
           {/* ::after */}
         </div>
         <div className={styles.PromoF_date}>
@@ -27,7 +27,7 @@ function PromoF({
       </div>
       <div className={styles.PromoF_content}>
         <div className={styles.PromoF_media}>
-          <Link className={styles.Link} to={`/post/${article_headLine}`}>
+          <Link className={styles.Link} href={`/post/${article_headLine}`}>
             <picture>
               <img className={styles.Image} data_image_size="promoSmall" alt="Simulator-Trainer-16x9.jpg" width="340" height="190" src={airticle_thumbnail}></img>
             </picture>
@@ -38,7 +38,7 @@ function PromoF({
             {article_subHeadLine}
           </div>
           <div className={styles.PromoF_category}>
-            <Link className={styles.Link} to={`/Blog/${article_category}`}>
+            <Link className={styles.Link} href={`/Blog/${article_category}`}>
               {article_category}
             </Link>
           </div>

@@ -1,0 +1,330 @@
+/* [project]/packages/header-type-a/src/css/hamburger.module.css [app-client] (css) */
+.hamburger-module___FdKmG__hamburger_outer_box {
+  background: var(--headerMenuBgColor);
+  border-top: 1px solid var(--headerBorderColor);
+  z-index: 90;
+  width: 100%;
+  max-width: 320px;
+  height: 100vh;
+  transition: left .1s ease-in-out;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.hamburger-module___FdKmG__Page_header_hamburger_menu {
+  background: var(--headerMenuBgColor);
+  border-top: 1px solid var(--headerBorderColor);
+  z-index: 90;
+  width: 360px;
+  max-width: 100%;
+  height: 100vh;
+  transition: left .1s ease-in-out;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.hamburger-module___FdKmG__hamburger_hidden {
+  left: calc(var(--hamburger-width) * -1);
+}
+
+.hamburger-module___FdKmG__hamburger_outer_box .hamburger-module___FdKmG__hamburger_navigatior {
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+}
+
+.hamburger-module___FdKmG__hamburger_navigatior_item {
+  border-bottom: 1px solid var(--headerBorderColor);
+  margin: 0 1em;
+}
+
+.hamburger-module___FdKmG__hamburger_navigatior_item:hover {
+  color: var(--primaryColor);
+}
+
+.hamburger-module___FdKmG__hamburger_navigatior_item .hamburger-module___FdKmG__hamburger_navigator_text {
+  font-size: var(--label-3);
+  margin: 1.2em 0;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 1025px) {
+  .hamburger-module___FdKmG__hamburger_outer_box {
+    display: none;
+  }
+}
+
+.hamburger-module___FdKmG__Page_header_hamburger_menu_content {
+  padding: 0 0 90px;
+}
+
+.hamburger-module___FdKmG__Navigation {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hamburger-module___FdKmG__Navigation_items {
+  width: 100%;
+}
+
+.hamburger-module___FdKmG__Navigation_items_item {
+  border-bottom: 1px solid var(--headerBorderColor);
+  margin: 0 20px;
+}
+
+.hamburger-module___FdKmG__NavigationItem {
+  position: relative;
+}
+
+@media only screen and (max-width: 1023px) {
+  .hamburger-module___FdKmG__NavigationItem {
+    position: static;
+  }
+}
+
+.hamburger-module___FdKmG__NavigationItem_text {
+  color: var(--primaryTextColor);
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--label-3);
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  line-height: 100%;
+  display: flex;
+}
+
+.hamburger-module___FdKmG__NavigationItem_text a {
+  width: 100%;
+  padding: 20px 20px 20px 0;
+  display: block;
+}
+
+.hamburger-module___FdKmG__NavigationItem_more {
+  cursor: pointer;
+  justify-content: flex-end;
+  align-items: center;
+  width: 40px;
+  height: 48px;
+  display: flex;
+}
+
+.hamburger-module___FdKmG__NavigationItem_more button {
+  cursor: pointer;
+  color: currentColor;
+  background: none;
+  border: 0;
+  padding: 0;
+  display: block;
+}
+
+.hamburger-module___FdKmG__NavigationItem_more svg {
+  fill: currentColor;
+  width: 8px;
+  height: 8px;
+}
+
+.hamburger-module___FdKmG__NavigationItem_items {
+  text-align: left;
+  padding: 0;
+  display: none;
+}
+
+@media only screen and (max-width: 1023px) {
+  .hamburger-module___FdKmG__NavigationItem_items {
+    background: var(--headerBgColor);
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    transition: transform .25s;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-y: scroll;
+    transform: translateX(-100%);
+  }
+}
+
+.hamburger-module___FdKmG__submenuOpened .hamburger-module___FdKmG__NavigationItem_items {
+  display: block;
+}
+
+@media only screen and (max-width: 1023px) {
+  .hamburger-module___FdKmG__submenuOpened .hamburger-module___FdKmG__NavigationItem_items {
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .hamburger-module___FdKmG__NavigationItem_items_item {
+    border-top: 1px solid #eaeded;
+  }
+
+  .hamburger-module___FdKmG__NavigationItem_items_item:not([data-back-link]) {
+    padding: 20px;
+  }
+}
+
+.hamburger-module___FdKmG__NavigationItem_items .hamburger-module___FdKmG__NavigationBackLink {
+  cursor: pointer;
+  width: 100%;
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--label-3);
+  background: none;
+  border: none;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 20px;
+  font-weight: 400;
+  line-height: 100%;
+  display: flex;
+}
+
+.hamburger-module___FdKmG__NavigationItem_items .hamburger-module___FdKmG__NavigationBackLink:hover {
+  color: var(--primaryColor);
+  text-decoration: none;
+}
+
+.hamburger-module___FdKmG__NavigationItem_items .hamburger-module___FdKmG__NavigationBackLink svg {
+  width: 10px;
+  height: 18px;
+}
+
+.hamburger-module___FdKmG__NavigationItem .hamburger-module___FdKmG__NavigationGroup > span.hamburger-module___FdKmG__NavigationLink {
+  color: var(--color-secondary-text);
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--title-6);
+  margin-bottom: 20px;
+  padding: 0;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.hamburger-module___FdKmG__NavigationItem .hamburger-module___FdKmG__NavigationLink {
+  width: 100%;
+  color: var(--primaryTextColor);
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--label-4);
+  align-items: center;
+  padding: 10px 0;
+  font-weight: 400;
+  line-height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.hamburger-module___FdKmG__NavigationItem .hamburger-module___FdKmG__NavigationGroup_items {
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.hamburger-module___FdKmG__NavigationItem .hamburger-module___FdKmG__NavigationGroup_items_item .hamburger-module___FdKmG__NavigationLink {
+  align-items: center;
+  min-height: 28px;
+  padding: 0;
+  display: flex;
+}
+
+.hamburger-module___FdKmG__NavigationItem .hamburger-module___FdKmG__NavigationLink_icon {
+  flex-shrink: 0;
+  width: 17px;
+  height: 17px;
+  margin-right: 10px;
+}
+
+.hamburger-module___FdKmG__Page_header_socialBar {
+  margin: 20px 20px 0;
+}
+
+.hamburger-module___FdKmG__Page_header_hamburger_menu .hamburger-module___FdKmG__SocialBar {
+  margin-top: 20px;
+}
+
+.hamburger-module___FdKmG__SocialBar_heading {
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--label-4);
+  margin-bottom: 15px;
+  font-weight: 700;
+  line-height: 100%;
+  display: none;
+}
+
+.hamburger-module___FdKmG__Page_header_hamburger_menu .hamburger-module___FdKmG__SocialBar_items {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.hamburger-module___FdKmG__SocialBar_items {
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  display: flex;
+}
+
+@media only screen and (min-width: 375px) {
+  .hamburger-module___FdKmG__SocialBar_items {
+    flex-wrap: unset;
+  }
+}
+
+.hamburger-module___FdKmG__SocialBar_items_item {
+  flex-shrink: 0;
+  margin: 0 10px 10px 0;
+}
+
+.hamburger-module___FdKmG__Page_header_hamburger_menu .hamburger-module___FdKmG__SocialBar_items_item {
+  margin: 0;
+}
+
+.hamburger-module___FdKmG__SocialLink {
+  background: var(--primaryColor);
+  color: #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  display: flex;
+}
+
+.hamburger-module___FdKmG__Page_header_hamburger_menu .hamburger-module___FdKmG__SocialBar_items_item .hamburger-module___FdKmG__SocialLink {
+  width: 24px;
+  height: 24px;
+  color: var(--primaryColor);
+  background: none;
+  border-radius: 0;
+}
+
+.hamburger-module___FdKmG__SocialLink svg {
+  fill: #fff;
+  width: 18px;
+  height: 18px;
+}
+
+.hamburger-module___FdKmG__Page_header_hamburger_menu .hamburger-module___FdKmG__SocialBar_items_item .hamburger-module___FdKmG__SocialLink svg {
+  fill: currentColor;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+}
+
+.hamburger-module___FdKmG__sr_only {
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=packages_header-type-a_src_css_hamburger_module_css_0w3-wzy._.single.css.map*/

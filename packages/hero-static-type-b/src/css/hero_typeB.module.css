@@ -1,4 +1,4 @@
-img {
+.Image {
   display: block;
   height: auto;
   max-width: 100%;
@@ -110,28 +110,28 @@ img {
   }
 }
 
-.HeadingLeadC_meida img {
+.HeadingLeadC_meida .Image {
   clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
   -webkit-clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
   width: 146px;
 }
 
 @media only screen and (min-width: 768px) {
-  .HeadingLeadC_meida img {
+  .HeadingLeadC_meida .Image {
     width: 230px;
     min-width: 230px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .HeadingLeadC_meida img {
+  .HeadingLeadC_meida .Image {
     width: 289px;
     min-width: 289px;
   }
 }
 
 @media only screen and (min-width: 1340px) {
-  .HeadingLeadC_meida img {
+  .HeadingLeadC_meida .Image {
     width: 326px;
     min-width: 326px;
   }

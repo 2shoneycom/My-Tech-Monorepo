@@ -1,5 +1,3 @@
-import logoImg from "../assets/images/logo.png";
-
 const socialItems = [
   {
     id: "youtube",
@@ -34,4 +32,7 @@ const socialItems = [
   }
 ];
 
-export default { logoImg, socialItems };
+export default { 
+  logoImg: "/images/logo.png", 
+  socialItems 
+};

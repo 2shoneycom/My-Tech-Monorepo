@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 import styles from "./css/section_typeA.module.css";
 import CustomCarousel from '@sean/custom-carousel';
 
@@ -30,7 +30,7 @@ function Section_typeA({ data = [] }) {
               <div key={item.id} className={styles.ResearchAreaCard}>
                 <Link
                   className={styles.ResearchAreaCard_link}
-                  to={item.link}
+                  href={item.link}
                 >
                   <div className={styles.ResearchAreaCard_media}>
                     <picture>

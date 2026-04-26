@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./css/heroslide_typeA.module.css";
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 
 function Heroslide_typeA({ data = [] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -70,7 +70,7 @@ function Heroslide_typeA({ data = [] }) {
                 <div className={styles.readmore_area}>
                   <Link
                     className={styles.readmore}
-                    to={`/post/${currentSlide.title}`}
+                    href={`/post/${currentSlide.title}`}
                   >
                     Read more
                   </Link>

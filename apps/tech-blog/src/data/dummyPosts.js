@@ -1,15 +1,15 @@
-import monoRepoImg1 from '../assets/images/monorepo_1.png';
-import clipPathImg1 from '../assets/images/clip-path_1.png';
-import infixToPrefixImg1 from '../assets/images/infix_to_prefix_1.png';
-import vanilaCSSvsFrameworkImg1 from '../assets/images/vanilacss_vs_framework_1.png';
-import vanilaCSSvsFrameworkImg2 from '../assets/images/vanilacss_vs_framework_2.jpeg';
-import graphImg1 from '../assets/images/graph_1.png';
-import graphImg2 from '../assets/images/graph_2.png';
-import graphImg3 from '../assets/images/graph_3.png';
-import graphImg4 from '../assets/images/graph_4.png';
-import graphImg5 from '../assets/images/graph_5.png';
-import viteImg1 from '../assets/images/vite_1.png';
-import viteImg2 from '../assets/images/vite_2.png';
+const monoRepoImg1 = "/images/monorepo_1.png";
+const clipPathImg1 = "/images/clip-path_1.png";
+const infixToPrefixImg1 = "/images/infix_to_prefix_1.png";
+const vanilaCSSvsFrameworkImg1 = "/images/vanilacss_vs_framework_1.png";
+const vanilaCSSvsFrameworkImg2 = "/images/vanilacss_vs_framework_2.png";
+const graphImg1 = "/images/graph_1.png";
+const graphImg2 = "/images/graph_2.png";
+const graphImg3 = "/images/graph_3.png";
+const graphImg4 = "/images/graph_4.png";
+const graphImg5 = "/images/graph_5.png";
+const viteImg1 = "/images/vite_1.png";
+const viteImg2 = "/images/vite_2.png";
 
 export const dummyPosts = [
   // Vite가 뭐길래
@@ -304,7 +304,7 @@ export const dummyPosts = [
         <div class="CodeBlock_header">
           <span>C++</span>
         </div>
-        <pre><code>bool edge[5][5];
+        <pre><code id="code">bool edge[5][5];
 
 // a <-> b
 edge[0][1] = true;
@@ -348,7 +348,7 @@ edge[4][2] = true;</code></pre>
         <div class="CodeBlock_header">
           <span>C++</span>
         </div>
-        <pre><code>vector<int> edge[5];
+        <pre><code id="code">vector<int> edge[5];
 
 // a <-> b
 edge[0].push_back(1);
@@ -495,7 +495,7 @@ edge[4].push_back(2);</code></pre>
         <div class="CodeBlock_header">
           <span>Bootstrap</span>
         </div>
-        <pre><code>&lt;!-- 파란색 버튼 --&gt;
+        <pre><code id="code">&lt;!-- 파란색 버튼 --&gt;
 &lt;button type="button" class="btn btn-primary">저장하기&lt;/button>
 
 &lt;!-- 빨간색 테두리 버튼 -->
@@ -511,7 +511,7 @@ edge[4].push_back(2);</code></pre>
         <div class="CodeBlock_header">
           <span>Bootstrap</span>
         </div>
-        <pre><code>&lt;div class="card" style="width: 18rem;">
+        <pre><code id="code">&lt;div class="card" style="width: 18rem;">
   &lt;img src="https://placeholder.com" class="card-img-top" alt="이미지">
   &lt;div class="card-body">
     &lt;h5 class="card-title">부트스트랩 카드&lt;/h5>
@@ -534,7 +534,7 @@ edge[4].push_back(2);</code></pre>
         <div class="CodeBlock_header">
           <span>Tailwind CSS</span>
         </div>
-        <pre><code>&lt;!-- 파란색, 둥근 모서리, 글자 흰색, 마우스 올리면(hover) 진해짐 -->
+        <pre><code id="code">&lt;!-- 파란색, 둥근 모서리, 글자 흰색, 마우스 올리면(hover) 진해짐 -->
 &lt;button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">
   저장하기
 &lt;/button>
@@ -551,7 +551,7 @@ edge[4].push_back(2);</code></pre>
         <div class="CodeBlock_header">
           <span>Tailwind CSS</span>
         </div>
-        <pre><code>&lt;div class="max-w-sm rounded overflow-hidden shadow-lg bg-white border border-gray-200">
+        <pre><code id="code">&lt;div class="max-w-sm rounded overflow-hidden shadow-lg bg-white border border-gray-200">
   &lt;img class="w-full" src="https://placeholder.com" alt="이미지">
   &lt;div class="px-6 py-4">
     &lt;div class="font-bold text-xl mb-2">테일윈드 카드&lt;/div>
@@ -775,7 +775,7 @@ edge[4].push_back(2);</code></pre>
         <div class="CodeBlock_header">
           <span>CSS</span>
         </div>
-        <pre><code>/* 예시 */
+        <pre><code id="code">/* 예시 */
 clip-path: circle(40%);
 clip-path: ellipse(130px 140px at 10% 20%);
 clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);

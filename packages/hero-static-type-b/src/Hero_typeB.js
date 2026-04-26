@@ -8,7 +8,7 @@ function Hero_typeB({ img, category, title, description }) {
           <div className={styles.HeadingLeadC_meida}>
             {/* ::before */}
             <picture>
-              <img className={styles.Image} dataImageSize="hexagonMedium" alt="AutomatedReasoning.svg" width="326" height="282" src={img || "https://assets.amazon.science/b3/e6/339a287646308dd0cf27be64860a/automatedreasoning.svg"}></img>
+              <img className={styles.Image} alt="AutomatedReasoning.svg" width="326" height="282" src={img || "https://assets.amazon.science/b3/e6/339a287646308dd0cf27be64860a/automatedreasoning.svg"}></img>
             </picture>
             {/* ::after */}
           </div>

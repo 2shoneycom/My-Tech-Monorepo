@@ -1,5 +1,5 @@
 import styles from "./css/footerA.module.css";
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 
 function Footer_typeA({ logoImg, socialItems }) {
   const footerMenuItems = [
@@ -8,10 +8,10 @@ function Footer_typeA({ logoImg, socialItems }) {
   ];
 
   return (
-    <footer>
+    <footer id={styles.footer}>
       <div className={styles.footer_body}>
         <div className={styles.footer_logo}>
-          <Link to="/">
+          <Link href="/">
             <img src={logoImg} alt="sean's tech blog" width="171" height="29"></img>
           </Link>
         </div>
@@ -24,7 +24,7 @@ function Footer_typeA({ logoImg, socialItems }) {
                     <li className={styles.FooterNavigation_items_item} key={index}>
                       <div className={styles.NavigationItem}>
                         <div className={styles.NavigationItem_text}>
-                          <Link className={styles.NavigationItem_text_link} to="/">{item}</Link>
+                          <Link className={styles.NavigationItem_text_link} href="/">{item}</Link>
                         </div>
                       </div>
                     </li>
@@ -46,7 +46,7 @@ function Footer_typeA({ logoImg, socialItems }) {
                   <div className={styles.PromoNewsletter_body}>
                     <div className={styles.PromoNewsletter_text}>
                       <div className={styles.PromoNewsletter_title}>
-                        <Link className="Link" to="/">
+                        <Link className="Link" href="/">
                           Get more from Sean's Tech Blog
                         </Link>
                       </div>
@@ -65,11 +65,11 @@ function Footer_typeA({ logoImg, socialItems }) {
         <div className={styles.footer_bottom_content}>
           <div className={styles.footer_disclaimer}>
             <p>
-              <Link className={styles.Link} to="/" target="_blank">Amazon.com</Link>
+              <Link className={styles.Link} href="/" target="_blank">Amazon.com</Link>
               {" | "}
-              <Link className={styles.Link} to="/" target="_blank">Conditions of Use</Link>
+              <Link className={styles.Link} href="/" target="_blank">Conditions of Use</Link>
               {" | "}
-              <Link className={styles.Link} to="/" target="_blank">Privacy</Link>
+              <Link className={styles.Link} href="/" target="_blank">Privacy</Link>
               {" | © 1996-2026 Amazon.com, Inc. or its affiliates"}
             </p>
           </div>
@@ -79,7 +79,7 @@ function Footer_typeA({ logoImg, socialItems }) {
               <ul className={styles.SocialBar_items}>
                 {socialItems.map((item, index) =>
                   <li className={styles.SocialBar_items_item} key={item.id}>
-                    <Link className={styles.SocialLink} to={item.url} target="_blank">
+                    <Link className={styles.SocialLink} href={item.url} target="_blank">
                       {item.svg}
                       <span className={styles.sr_only}>{item.name}</span>
                     </Link>

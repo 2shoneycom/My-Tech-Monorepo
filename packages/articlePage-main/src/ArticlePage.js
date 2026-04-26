@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import styles from './css/articlePage.module.css';
 
 function ArticlePage({ article_category, article_headLine, article_subHeadLine, article_author,
@@ -9,7 +9,7 @@ function ArticlePage({ article_category, article_headLine, article_subHeadLine, 
       <article className={styles.ArticlePage_mainContent}>
         <div className={styles.ArticlePage_category}>
           <span className={styles.Link}>
-            <Link to='#'>{article_category}</Link>
+            <Link href='#'>{article_category}</Link>
           </span>
         </div>
         <h1 className={styles.ArticlePage_headline}>
@@ -22,7 +22,7 @@ function ArticlePage({ article_category, article_headLine, article_subHeadLine, 
           <div className={styles.ArticlePage_byline}>
             <div className={styles.ArticlePage_authors}>
               <span className={styles.ArticlePage_authorBy}>By{'\u00A0'}</span>
-              <Link to='#'>
+              <Link href='#'>
                 <span>{article_author}</span>
               </Link>
             </div>
@@ -39,7 +39,7 @@ function ArticlePage({ article_category, article_headLine, article_subHeadLine, 
             <div className={styles.ActionBar}>
               <div className={styles.ActionBar_overlay}></div>
               <div className={styles.ActionBar_heading}>
-                <Link to='#'>
+                <Link href='#'>
                   <svg id="shareIcon" width="16px" height="16px" viewBox="0 0 16 16">
                     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                       <g transform="translate(-927.000000, -946.000000)" fill="currentColor" fillRule="nonzero">
@@ -76,7 +76,7 @@ function ArticlePage({ article_category, article_headLine, article_subHeadLine, 
                     </div>
                     <ul className={styles.ListRelatedItems_items}>
                       <li className={styles.ListRelatedItems_items_item}>
-                        <Link to={'#'}>
+                        <Link href={'#'}>
                           KDD 2025
                         </Link>
                       </li>
@@ -104,7 +104,7 @@ function ArticlePage({ article_category, article_headLine, article_subHeadLine, 
             </div>
             <ul className={styles.ListTags_items}>
               <li className={styles.ListTags_items_item}>
-                <Link className={styles.Link} to='#'>
+                <Link className={styles.Link} href='#'>
                   {article_category}
                 </Link>
               </li>
@@ -117,9 +117,9 @@ function ArticlePage({ article_category, article_headLine, article_subHeadLine, 
               Tags
             </div>
             <ul className={styles.ListTags_items}>
-              {article_tags.map((tag) => 
-                <li className={styles.ListTags_items_item}>
-                  <Link className={styles.Link} to='#'>
+              {article_tags.map((tag, index) => 
+                <li className={styles.ListTags_items_item} key={index}>
+                  <Link className={styles.Link} href='#'>
                     {tag}
                   </Link>
                 </li>

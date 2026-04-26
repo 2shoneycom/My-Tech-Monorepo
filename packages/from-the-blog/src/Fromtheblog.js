@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 import styles from "./css/fromtheblog.module.css";
 import PromoA from '@sean/promo-a';
 
@@ -19,7 +19,7 @@ function Fromtheblog({ viewAllLik, data = [] }) {
           <div className={styles.fromtheblog_heading_text}>
             <div className={styles.fromtheblog_header_wrapper}>
               <h2 className={styles.fromtheblog_header}>From the blog</h2>
-              <Link className={styles.fromtheblog_header_button} to={viewAllLik}>View all</Link>
+              <Link className={styles.fromtheblog_header_button} href={viewAllLik}>View all</Link>
               <div className={styles.fromtheblog_header_description}>
                 Technical deep-dives and perspectives from our scientists.
               </div>
@@ -42,7 +42,7 @@ function Fromtheblog({ viewAllLik, data = [] }) {
         </ul>
       </div>
       <div className={styles.fromtheblog_footer_wrapper}>
-        <Link className={styles.fromtheblog_footer_button} to="blog">View all</Link>
+        <Link className={styles.fromtheblog_footer_button} href="blog">View all</Link>
       </div>
     </div>
   );

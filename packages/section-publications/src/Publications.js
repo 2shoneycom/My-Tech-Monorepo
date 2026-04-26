@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import styles from './css/publications.module.css';
 
 function Publications({ data = [], loadNext }) {
@@ -7,7 +7,7 @@ function Publications({ data = [], loadNext }) {
       {/* ::before */}
       <div className={styles.header_wrapper}>
         <h2 className={styles.header}>Publications</h2>
-        <Link className={styles.header_button} to='/Article Search'>View all</Link>
+        <Link className={styles.header_button} href='/Article Search'>View all</Link>
       </div>
       <div className={styles.body}>
         <ul className={styles.body_items}>
@@ -15,11 +15,11 @@ function Publications({ data = [], loadNext }) {
             <li className={styles.body_items_item} key={index}>
               <div className={styles.PromoF}>
                 <div className={styles.PromoF_title}>
-                  <Link className={styles.Link} to={`/post/${item.title}`}>{item.title}</Link>
+                  <Link className={styles.Link} href={`/post/${item.title}`}>{item.title}</Link>
                 </div>
                 <div className={styles.PromoF_details}>
                   <div className={styles.PromoF_authors}>
-                    <Link className={styles.Link} to={`/author/${item.author}`}>{item.author}</Link>
+                    <Link className={styles.Link} href={`/author/${item.author}`}>{item.author}</Link>
                     {/* ::after*/}
                   </div>
                   <div className={styles.PromoF_date}>{item.date}</div>
@@ -29,11 +29,11 @@ function Publications({ data = [], loadNext }) {
                     <div className={styles.PromoF_description}>
                       {item.subTitle}
                       <span>...
-                        <Link className={styles.Link} to={`/post/${item.title}`}>Read more</Link>
+                        <Link className={styles.Link} href={`/post/${item.title}`}>Read more</Link>
                       </span>
                     </div>
                     <div className={styles.PromoF_category}>
-                      <Link className={styles.Link} to={`/Blog/${item.category}`}>{item.category}</Link>
+                      <Link className={styles.Link} href={`/Blog/${item.category}`}>{item.category}</Link>
                     </div>
                   </div>
                 </div>
@@ -42,7 +42,7 @@ function Publications({ data = [], loadNext }) {
           )}
         </ul>
         <div className={styles.nextPage}>
-          <Link className={styles.Link} onClick={loadNext}>Load more</Link>
+          <Link className={styles.Link} onClick={loadNext} href='#'>Load more</Link>
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-footer {
+#footer {
   background-color: var(--footerBgColor);
   color: var(--footerTextColor);
   display: block;

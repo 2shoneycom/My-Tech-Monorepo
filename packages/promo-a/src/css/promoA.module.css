@@ -7,11 +7,11 @@
   display: block;
 }
 
-.PromoA_media img {
+.PromoA_media .Image {
   width: 100%;
 }
 
-img {
+.Image {
   display: block;
   height: auto;
   max-width: 100%;

@@ -1,5 +1,3 @@
-import logoImg from "../assets/images/logo.png";
-import logoSvg from "../assets/svg/logo.svg"
 import researchAreaData from "./categoryData";
 
 const menuItems = ["Article Search", "Blog", "Projects", "Essay"];
@@ -16,4 +14,10 @@ const subTitles = [
   null,
 ];
 
-export default { logoImg, logoSvg, menuItems, subMenuItems, subTitles };
+export default { 
+  logoImg: "/images/logo.png", 
+  logoSvg: "/svg/logo.svg", 
+  menuItems, 
+  subMenuItems, 
+  subTitles 
+};

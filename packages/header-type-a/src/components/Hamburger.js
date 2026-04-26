@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import styles from "../css/hamburger.module.css";
 
 function Hamburger({ menuItems, subMenuItems, socialItems, subTitles, isMenuOpen }) {
@@ -40,7 +40,7 @@ function Hamburger({ menuItems, subMenuItems, socialItems, subTitles, isMenuOpen
                       <div className={styles.NavigationItem_text}>
                         <Link
                           className={styles.NavigationItem_text_link}
-                        // to={`/${item}`}
+                          href='#'
                         >
                           {item}
                         </Link>
@@ -79,11 +79,11 @@ function Hamburger({ menuItems, subMenuItems, socialItems, subTitles, isMenuOpen
                             <ul className={styles.NavigationGroup_items}>
                               {/* 하위 메뉴들 */}
                               {subMenuItems[index].map((subItem, subIndex) =>
-                                <li className={styles.NavigationGroup_items_item}>
+                                <li className={styles.NavigationGroup_items_item} key={subIndex}>
                                   {/* ::before (일단 구현 안했음) */}
                                   <Link
                                     className={styles.NavigationLink}
-                                    to={`/${item}/${subItem.title}`}
+                                    href={`/${item}/${subItem.title}`.toLocaleLowerCase().replace(/\s+/g, '-')}
                                   >
                                     <span className={styles.NavigationLink_icon}>
                                       <picture>
@@ -105,7 +105,7 @@ function Hamburger({ menuItems, subMenuItems, socialItems, subTitles, isMenuOpen
                       <div className={styles.NavigationItem_text}>
                         <Link
                           className={styles.NavigationItem_text_link}
-                          to={`/${item}`}
+                          href={`/${item}`.toLocaleLowerCase().replace(/\s+/g, '-')}
                         >
                           {item}
                         </Link>
@@ -124,7 +124,7 @@ function Hamburger({ menuItems, subMenuItems, socialItems, subTitles, isMenuOpen
               <ul className={styles.SocialBar_items}>
                 {socialItems.map((item, index) =>
                   <li className={styles.SocialBar_items_item} key={item.id}>
-                    <Link className={styles.SocialLink} to={item.url}>
+                    <Link className={styles.SocialLink} href={item.url}>
                       {item.svg}
                       <span className={styles.sr_only}>{item.name}</span>
                     </Link>

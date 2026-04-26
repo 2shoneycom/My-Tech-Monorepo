@@ -1,0 +1,77 @@
+"use client";
+
+import styles from "../../_css/blogPost.module.css";
+import { use, useEffect, useState } from "react";
+
+import Header from "@sean/header-type-a";
+import ArticlePage from "@sean/articlePage-main";
+import Footer from "@sean/footer-type-a";
+import { getPostById } from "../../../src/api/posts";
+
+// 데이터 로드
+import headerData from "../../../src//data/headerData";
+import footerData from "../../../src//data/footerData";
+
+interface PageProps {
+  params: Promise<{ id: string }>;
+}
+
+function BlogPost({ params }: PageProps) {
+  const resolvedParams = use(params);
+  const id = resolvedParams.id;
+
+  const [postData, setPostData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchPost = async () => {
+      try {
+        setIsLoading(true);
+        const data = await getPostById(id); // API 호출
+        setPostData(data);
+      } catch (err) {
+        console.log("에러메시지: " + err.message);
+        setError(err.message);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchPost();
+  }, [id]);
+
+  // 1. 로딩 중일 때 보여줄 화면
+  if (isLoading) return <div className={styles.top_container}></div>;
+
+  return (
+    <div className={styles.top_container}>
+      <Header
+        logoImg={headerData.logoImg}
+        menuItems={headerData.menuItems}
+        subMenuItems={headerData.subMenuItems}
+        subTitles={headerData.subTitles}
+        socialItems={footerData.socialItems}
+      />
+      {error || !postData
+        ? <h2>Something went wrong</h2>
+        : <ArticlePage
+          article_category={postData.category}
+          article_headLine={postData.title}
+          article_subHeadLine={postData.subTitle}
+          article_author={postData.author}
+          article_date={postData.date}
+          article_readDuration={postData.readDuration}
+          article_content={postData.content}
+          article_tags={postData.tag}
+        />
+      }
+      <Footer
+        logoImg={footerData.logoImg}
+        socialItems={footerData.socialItems}
+      />
+    </div>
+  );
+}
+
+export default BlogPost;

@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 import styles from "./css/header_typeA.module.css";
 import useSmartHeader from "./customHooks/useSmartHeader";
 import Hamburger from "./components/Hamburger";
 
-function Header_typeA({ logoImg, menuItems, subMenuItems, subTitles, socialItems}) {
+function Header_typeA({ logoImg, menuItems, subMenuItems, subTitles, socialItems }) {
   /* [Hamburger Menu] */
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -49,9 +49,9 @@ function Header_typeA({ logoImg, menuItems, subMenuItems, subTitles, socialItems
           {/* Logo */}
           <Link
             className={styles.header_logo}
-            to="/"
+            href="/"
           >
-            <img src={logoImg} alt="seans' tech blog"></img>
+            <img className={styles.Image} src={logoImg} alt="seans' tech blog"></img>
           </Link>
 
           {/* Navigator */}
@@ -86,7 +86,7 @@ function Header_typeA({ logoImg, menuItems, subMenuItems, subTitles, socialItems
                               <li className={styles.NavigationGroup_items_item} key={subItem.id}>
                                 <Link
                                   className={styles.NavigationLink}
-                                  to={`/${item}/${subItem.title}`}
+                                  href={`/${item}/${subItem.title}`.toLocaleLowerCase().replace(/\s+/g, '-')}
                                 >
                                   <span className={styles.NavigationLink_icon}>
                                     <picture>
@@ -109,7 +109,7 @@ function Header_typeA({ logoImg, menuItems, subMenuItems, subTitles, socialItems
                     <div className={styles.NavigationItem_text}>
                       <Link
                         className={styles.NavigationItem_text_link}
-                        to={`/${item}`}
+                        href={`/${item}`.toLocaleLowerCase().replace(/\s+/g, '-')}
                         key={index}
                       >
                         {item}

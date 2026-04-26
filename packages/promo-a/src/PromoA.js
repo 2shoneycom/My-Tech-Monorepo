@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import styles from './css/promoA.module.css';
 
 function PromoA({ item, detailsOn = true, descciptOn = true, categoryOn = true, mediaClassName, titleClassName }) {
   return (
     <div className={styles.PromoA}>
       <div className={`${styles.PromoA_media} ${mediaClassName || ''}`}>
-        <Link className={styles.Link} to={`/post/${item.title}`}>
+        <Link className={styles.Link} href={`/post/${item.title}`}>
           <picture>
             <img className="Image" data-image-size="promoMedium" alt={`${item.title} + _image`} src={item.thumbnail} />
           </picture>
@@ -13,7 +13,7 @@ function PromoA({ item, detailsOn = true, descciptOn = true, categoryOn = true, 
       </div>
       <div className={styles.PromoA_content}>
         <div className={`${styles.PromoA_title} ${titleClassName || ''}`}>
-          <Link className={styles.Link} to={`/post/${item.title}`}>
+          <Link className={styles.Link} href={`/post/${item.title}`}>
             {item.title}
           </Link>
         </div>
@@ -40,7 +40,7 @@ function PromoA({ item, detailsOn = true, descciptOn = true, categoryOn = true, 
         {
           categoryOn ?
             <div className={styles.PromoA_category}>
-              <Link className={styles.Link} to={`/Blog/${item.category}`}>
+              <Link className={styles.Link} href={`/Blog/${item.category}`}>
                 {item.category}
               </Link>
             </div> :
