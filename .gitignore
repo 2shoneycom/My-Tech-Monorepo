@@ -1,5 +1,16 @@
-# .gitignore
-node_modules
+# Dependency
+node_modules/
+
+# Next.js build output & cache (가장 중요!)
+.next/
+out/
+
+# Production build (CRA 잔재 포함)
+build/
+dist/
+
+# OS files
 .DS_Store
-build
-dist
+
+# Local env files
+.env*.local
