@@ -2,7 +2,8 @@
 node_modules/
 
 # Next.js build output & cache (가장 중요!)
-.next/
+**/.next/
+**/.next/cache/
 out/
 
 # Production build (CRA 잔재 포함)
