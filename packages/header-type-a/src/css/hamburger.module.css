@@ -267,6 +267,10 @@
   flex-shrink: 0;
 }
 
+.NavigationLink_icon .Image {
+  width: 100%;
+}
+
 .Page_header_socialBar {
   margin: 20px 20px 0;
 }

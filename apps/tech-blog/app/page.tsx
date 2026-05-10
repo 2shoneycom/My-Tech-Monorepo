@@ -52,7 +52,7 @@ function Home() {
       <HeroSlide data={heroData} />
       <AreaSection data={[...categoryData.researchAreaData, ...categoryData.extraCategoryData]} />
       <Fromtheblog
-        viewAllLik="Article Search"
+        viewAllLik="article-search"
         data={fromtheblogData}
       />
       <FeaturedNews data={featuredNewsData} />

@@ -7,7 +7,7 @@ function PromoA({ item, detailsOn = true, descciptOn = true, categoryOn = true, 
       <div className={`${styles.PromoA_media} ${mediaClassName || ''}`}>
         <Link className={styles.Link} href={`/post/${item.title}`}>
           <picture>
-            <img className="Image" data-image-size="promoMedium" alt={`${item.title} + _image`} src={item.thumbnail} />
+            <img className={styles.Image} data-image-size="promoMedium" alt={`${item.title} + _image`} src={item.thumbnail} />
           </picture>
         </Link>
       </div>

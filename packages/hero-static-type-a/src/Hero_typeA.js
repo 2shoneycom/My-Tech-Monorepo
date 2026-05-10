@@ -6,7 +6,7 @@ function Hero_typeA() {
       <div className={styles.HeroA}>
         <div className={styles.HeroA_backgroundMedia}>
           <picture>
-            <img className={styles.Image} alt="blog-lead-image-2.png" width="1440" height="320" src="https://assets.amazon.science/dims4/default/e5fec33/2147483647/strip/true/crop/1280x284+0+199/resize/1440x320!/quality/90/?url=http%3A%2F%2Famazon-topics-brightspot.s3.amazonaws.com%2Fscience%2Fe7%2Fae%2F3994cfc54ec293d3fe184741d3d1%2Fimage-11.png"></img>
+            <img className={styles.Image} alt="blog-lead-image-2.png" width="1440" height="320" src="/images/amazon_blog_bgimage.webp"></img>
           </picture>
           {/* ::after */}
         </div>
