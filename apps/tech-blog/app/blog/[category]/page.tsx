@@ -12,7 +12,10 @@ import Footer from '@sean/footer-type-a';
 import headerData from "../../../src/data/headerData";
 import categoryData from "../../../src/data/categoryData";
 import footerData from "../../../src/data/footerData";
-import { use } from "react";
+import { loadSlicedPosts } from "../../../src/api/posts";
+import { use, useState } from "react";
+
+const PUB_LOAD_AMOUNT = 2;
 
 interface PageProps {
   params: Promise<{ category: string }>;
@@ -25,6 +28,23 @@ function SubCategory({ params, fixedCategory }: PageProps) {
   const heroContents = fixedCategory === undefined
     ? categoryData.researchAreaData
     : categoryData.extraCategoryData;
+
+  const [pubIdx, setPubIdx] = useState(0);
+  const [publicationsData, setPublicationsData] = useState(loadSlicedPosts(pubIdx, pubIdx + PUB_LOAD_AMOUNT));
+
+  const loadNextPublications = () => {
+    // 2. 현재 인덱스에 불러올 개수를 더해 '다음 인덱스'를 미리 계산합니다.
+    const nextIdx = pubIdx + PUB_LOAD_AMOUNT;
+    console.log(`불러올 다음 인덱스: ${nextIdx}`);
+
+    // 3. 계산된 값을 state에 저장해 다음번 클릭을 대비합니다.
+    setPubIdx(nextIdx);
+
+    // 4. 기존 데이터(prevData)에 새 데이터를 이어 붙입니다.
+    setPublicationsData((prevData) =>
+      prevData.concat(loadSlicedPosts(nextIdx, nextIdx + PUB_LOAD_AMOUNT))
+    );
+  }
 
   // 현재 URL 파라미터와 일치하는 Hero 콘텐츠 찾기
   const currentHero = category
@@ -51,7 +71,7 @@ function SubCategory({ params, fixedCategory }: PageProps) {
         title={currentHero.title}
         description={currentHero.description}
       />
-      <Publications data={filteredPublications} />
+      <Publications data={filteredPublications} loadNext={loadNextPublications} />
       <Footer
         logoImg={footerData.logoImg}
         socialItems={footerData.socialItems}
