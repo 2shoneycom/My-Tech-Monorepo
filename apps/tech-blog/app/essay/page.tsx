@@ -12,15 +12,13 @@ import Footer from '@sean/footer-type-a';
 import headerData from "../../src/data/headerData";
 import categoryData from "../../src/data/categoryData";
 import footerData from "../../src/data/footerData";
-import { useParams } from "next/navigation";
 import { useState } from "react";
 import { loadSlicedPosts } from "../../src/api/posts";
 
 const PUB_LOAD_AMOUNT = 2;
 
 function SubCategory({ fixedCategory = "Essay" }) {
-  const params = useParams();
-  const category = fixedCategory === undefined ? params.category : fixedCategory;
+  const category = fixedCategory;
   const heroContents = fixedCategory === undefined ? categoryData.researchAreaData : categoryData.extraCategoryData;
   const [pubIdx, setPubIdx] = useState(0);
   const [publicationsData, setPublicationsData] = useState(loadSlicedPosts(pubIdx, pubIdx + PUB_LOAD_AMOUNT));
@@ -39,14 +37,12 @@ function SubCategory({ fixedCategory = "Essay" }) {
     );
   }
 
-  // 현재 URL 파라미터와 일치하는 Hero 콘텐츠 찾기
   const currentHero = heroContents.find(
     (item) => item.id.toLowerCase() === category.toLowerCase()
   ) || heroContents[0];
 
-  // 게시글 목록 필터링 (현재 카테고리와 일치하는 글만 추리기)
   const filteredPublications = dummyPosts.filter(
-    (post) => post.category.toLowerCase() === category.toLocaleLowerCase()
+    (post) => post.category.toLowerCase() === category.toLowerCase()
   );
 
   return (
