@@ -1,6 +1,6 @@
 [build]
   base = "/"
-  command = "npm install && npm run build --workspace=apps/tech-blog"
+  command = "CI=false npm --workspace tech-blog run build"
   publish = "apps/tech-blog/.next"
 
 [[plugins]]
