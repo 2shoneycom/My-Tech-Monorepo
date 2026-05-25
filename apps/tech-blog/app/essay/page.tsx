@@ -12,7 +12,7 @@ import Footer from '@sean/footer-type-a';
 import headerData from "../../src/data/headerData";
 import categoryData from "../../src/data/categoryData";
 import footerData from "../../src/data/footerData";
-import { useParams } from "react-router-dom";
+import { useParams } from "next/navigation";
 import { useState } from "react";
 import { loadSlicedPosts } from "../../src/api/posts";
 
