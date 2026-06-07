@@ -568,7 +568,7 @@ main .ArticlePage_tags {
   overflow-x: auto; /* 코드가 길면 가로 스크롤 */
 }
 
-.RichTextBody pre #code {
+.RichTextBody pre :global(.code) {
   color: #d4d4d4; /* 옅은 회색 글자색 */
   font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 14px;
@@ -577,7 +577,7 @@ main .ArticlePage_tags {
 }
 
 /* 인라인 코드 스타일 (문장 중간에 나오는 `code`) */
-:not(pre) > #code {
+:not(pre) > :global(.code) {
   background-color: #f0f2f5;
   color: #e91e63; /* 강조색 */
   padding: 2px 5px;
