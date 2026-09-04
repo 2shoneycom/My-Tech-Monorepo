@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect, useRef, Children } from "react";
 import styles from "./css/customCarousel.module.css";
 

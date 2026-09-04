@@ -1,3 +1,5 @@
+"use client";
+
 import Link from 'next/link';
 import styles from "./css/section_typeA.module.css";
 import CustomCarousel from '@sean/custom-carousel';

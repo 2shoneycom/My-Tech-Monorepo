@@ -1,48 +1,32 @@
-"use client";
-
 import styles from "../../_css/blogPost.module.css";
-import { use, useEffect, useState } from "react";
 
 import Header from "@sean/header-type-a";
 import ArticlePage from "@sean/articlePage-main";
 import Footer from "@sean/footer-type-a";
-import { getPostById } from "../../../src/api/posts";
+import { getPostById, loadAllPosts, type Post } from "../../../src/api/posts";
 
 // 데이터 로드
-import headerData from "../../../src//data/headerData";
-import footerData from "../../../src//data/footerData";
+import headerData from "../../../src/data/headerData";
+import footerData from "../../../src/data/footerData";
 
 interface PageProps {
   params: Promise<{ id: string }>;
 }
 
-function BlogPost({ params }: PageProps) {
-  const resolvedParams = use(params);
-  const id = resolvedParams.id;
+// 빌드 시 모든 게시글 경로를 정적 생성한다 (SSG)
+export function generateStaticParams() {
+  return loadAllPosts().map((post) => ({ id: post.id }));
+}
 
-  const [postData, setPostData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+async function BlogPost({ params }: PageProps) {
+  const { id } = await params;
 
-  useEffect(() => {
-    const fetchPost = async () => {
-      try {
-        setIsLoading(true);
-        const data = await getPostById(id); // API 호출
-        setPostData(data);
-      } catch (err) {
-        console.log("에러메시지: " + err.message);
-        setError(err.message);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchPost();
-  }, [id]);
-
-  // 1. 로딩 중일 때 보여줄 화면
-  if (isLoading) return <div className={styles.top_container}></div>;
+  let postData: Post | null = null;
+  try {
+    postData = await getPostById(id);
+  } catch (err) {
+    console.error("게시글 로드 실패:", (err as Error).message);
+  }
 
   return (
     <div className={styles.top_container}>
@@ -53,7 +37,7 @@ function BlogPost({ params }: PageProps) {
         subTitles={headerData.subTitles}
         socialItems={footerData.socialItems}
       />
-      {error || !postData
+      {!postData
         ? <h2>Something went wrong</h2>
         : <ArticlePage
           article_category={postData.category}

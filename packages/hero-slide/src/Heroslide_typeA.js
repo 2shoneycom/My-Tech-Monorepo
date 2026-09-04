@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import styles from "./css/heroslide_typeA.module.css";
 import Link from 'next/link';

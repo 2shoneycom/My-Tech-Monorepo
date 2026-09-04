@@ -1,49 +1,25 @@
-"use client";
-
 import styles from "../_css/subCategory.module.css";
-import { dummyPosts } from "../../src/data/dummyPosts";
 
 import Header from '@sean/header-type-a';
 import Hero_typeB from '@sean/hero-static-type-b';
-import Publications from '@sean/section-publications';
 import Footer from '@sean/footer-type-a';
+import PublicationsSection from '../_components/PublicationsSection';
 
 // 데이터 로드
 import headerData from "../../src/data/headerData";
 import categoryData from "../../src/data/categoryData";
 import footerData from "../../src/data/footerData";
-import { useState } from "react";
-import { loadSlicedPosts } from "../../src/api/posts";
+import { loadPostsByCategory } from "../../src/api/posts";
 
-const PUB_LOAD_AMOUNT = 2;
+const CATEGORY = "Essay";
 
-function SubCategory({ fixedCategory = "Essay" }) {
-  const category = fixedCategory;
-  const heroContents = fixedCategory === undefined ? categoryData.researchAreaData : categoryData.extraCategoryData;
-  const [pubIdx, setPubIdx] = useState(0);
-  const [publicationsData, setPublicationsData] = useState(loadSlicedPosts(pubIdx, pubIdx + PUB_LOAD_AMOUNT));
-
-  const loadNextPublications = () => {
-    // 2. 현재 인덱스에 불러올 개수를 더해 '다음 인덱스'를 미리 계산합니다.
-    const nextIdx = pubIdx + PUB_LOAD_AMOUNT;
-    console.log(`불러올 다음 인덱스: ${nextIdx}`);
-
-    // 3. 계산된 값을 state에 저장해 다음번 클릭을 대비합니다.
-    setPubIdx(nextIdx);
-
-    // 4. 기존 데이터(prevData)에 새 데이터를 이어 붙입니다.
-    setPublicationsData((prevData) =>
-      prevData.concat(loadSlicedPosts(nextIdx, nextIdx + PUB_LOAD_AMOUNT))
-    );
-  }
-
+function EssayPage() {
+  const heroContents = categoryData.extraCategoryData;
   const currentHero = heroContents.find(
-    (item) => item.id.toLowerCase() === category.toLowerCase()
+    (item) => item.id.toLowerCase() === CATEGORY.toLowerCase()
   ) || heroContents[0];
 
-  const filteredPublications = dummyPosts.filter(
-    (post) => post.category.toLowerCase() === category.toLowerCase()
-  );
+  const posts = loadPostsByCategory(CATEGORY);
 
   return (
     <div className={styles.top_container}>
@@ -56,11 +32,11 @@ function SubCategory({ fixedCategory = "Essay" }) {
       />
       <Hero_typeB
         img={currentHero.icon}
-        category={fixedCategory === null ? "Research Area" : null}
+        category={null}
         title={currentHero.title}
         description={currentHero.description}
       />
-      <Publications data={filteredPublications} loadNext={loadNextPublications} />
+      <PublicationsSection posts={posts} />
       <Footer
         logoImg={footerData.logoImg}
         socialItems={footerData.socialItems}
@@ -69,4 +45,4 @@ function SubCategory({ fixedCategory = "Essay" }) {
   );
 }
 
-export default SubCategory;
+export default EssayPage;
