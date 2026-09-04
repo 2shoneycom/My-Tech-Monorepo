@@ -38,7 +38,7 @@ function PromoF({
             {article_subHeadLine}
           </div>
           <div className={styles.PromoF_category}>
-            <Link className={styles.Link} href={`/Blog/${article_category}`}>
+            <Link className={styles.Link} href={`/blog/${article_category.toLowerCase()}`}>
               {article_category}
             </Link>
           </div>

@@ -40,7 +40,7 @@ function PromoA({ item, detailsOn = true, descciptOn = true, categoryOn = true, 
         {
           categoryOn ?
             <div className={styles.PromoA_category}>
-              <Link className={styles.Link} href={`/Blog/${item.category}`}>
+              <Link className={styles.Link} href={`/blog/${item.category.toLowerCase()}`}>
                 {item.category}
               </Link>
             </div> :

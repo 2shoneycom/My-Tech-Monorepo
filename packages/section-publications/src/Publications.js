@@ -7,7 +7,7 @@ function Publications({ data = [], loadNext }) {
       {/* ::before */}
       <div className={styles.header_wrapper}>
         <h2 className={styles.header}>Publications</h2>
-        <Link className={styles.header_button} href='/Article Search'>View all</Link>
+        <Link className={styles.header_button} href='/article-search'>View all</Link>
       </div>
       <div className={styles.body}>
         <ul className={styles.body_items}>
@@ -33,7 +33,7 @@ function Publications({ data = [], loadNext }) {
                       </span>
                     </div>
                     <div className={styles.PromoF_category}>
-                      <Link className={styles.Link} href={`/Blog/${item.category}`}>{item.category}</Link>
+                      <Link className={styles.Link} href={`/blog/${item.category.toLowerCase()}`}>{item.category}</Link>
                     </div>
                   </div>
                 </div>
