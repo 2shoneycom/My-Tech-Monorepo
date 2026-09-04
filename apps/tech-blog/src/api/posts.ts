@@ -1,9 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
-import { remark } from "remark";
-import remarkGfm from "remark-gfm";
-import remarkHtml from "remark-html";
+import { renderContent } from "../lib/markdown";
 
 // 파일 기반 콘텐츠: apps/tech-blog/content/posts/*.md
 // 각 파일은 frontmatter(메타데이터) + 본문으로 구성된다.
@@ -53,21 +51,6 @@ function getAllPostsMeta(): PostMeta[] {
   return readAllRaw()
     .map((post) => toMeta(post.data))
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-}
-
-// 기존 포스트들은 Amazon Science 스타일의 커스텀 마크업(CodeBlock, Figure 등)이
-// 담긴 완성된 HTML로 작성돼 있다. 그대로 완성된 문서이므로 마크다운 파서를
-// 거치지 않고 그대로 통과시킨다. 새 글을 순수 마크다운(#, **bold**, ``` 코드펜스 등)으로
-// 작성하면 remark가 이를 HTML로 변환해준다.
-async function renderContent(raw: string): Promise<string> {
-  const trimmed = raw.trim();
-  const looksLikeHtml = trimmed.startsWith("<");
-  if (looksLikeHtml) {
-    return trimmed;
-  }
-
-  const processed = await remark().use(remarkGfm).use(remarkHtml, { sanitize: false }).process(raw);
-  return processed.toString();
 }
 
 // 구간별 게시글 로드 (목록 카드용 — 본문 렌더링은 하지 않아 가볍다)
