@@ -137,3 +137,143 @@
   font-size: var(--body-1);
   line-height: 160%;
 }
+
+.detail_content h2 {
+  margin-top: 40px;
+  margin-bottom: 16px;
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--title-4);
+  font-weight: 700;
+}
+
+.detail_content h3 {
+  margin-top: 28px;
+  margin-bottom: 12px;
+  font-family: var(--tertiaryHeadlineFont), Arial, Helvetica, sans-serif;
+  font-size: var(--title-6);
+  font-weight: 700;
+}
+
+.detail_content p,
+.detail_content ul {
+  margin-bottom: 16px;
+}
+
+.detail_content ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.detail_content a {
+  color: var(--primaryColor);
+  text-decoration: underline;
+}
+
+.detail_content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border: 1px solid var(--headerBorderColor);
+  border-radius: 8px;
+}
+
+/* GitHub README에 자주 쓰이는 shields.io 뱃지: 큰 액자형 이미지가 아니라
+   나란히 붙는 작은 인라인 태그로 보여야 한다 */
+.detail_content img[src*="shields.io"] {
+  display: inline-block;
+  width: auto;
+  height: 28px;
+  margin: 4px 4px 4px 0;
+  border: none;
+  border-radius: 0;
+  vertical-align: middle;
+}
+
+/* GFM 표 */
+.detail_content table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.detail_content th,
+.detail_content td {
+  border: 1px solid var(--headerBorderColor);
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.detail_content th {
+  background-color: var(--aboveBgColor);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* 표 안에 들어간 이미지(아바타, 스크린샷 비교 등)는 액자형 여백 없이 셀에 맞춘다 */
+.detail_content td img {
+  margin: 0 auto;
+}
+
+/* 인용구 */
+.detail_content blockquote {
+  margin: 20px 0;
+  padding: 16px 20px;
+  border-left: 4px solid var(--primaryColor);
+  background-color: var(--aboveBgColor);
+  color: var(--secondaryTextColor);
+}
+
+.detail_content blockquote p {
+  margin-bottom: 8px;
+}
+
+.detail_content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* 접이식 섹션 */
+.detail_content details {
+  margin: 20px 0;
+  padding: 16px 20px;
+  border: 1px solid var(--headerBorderColor);
+  border-radius: 8px;
+}
+
+.detail_content details[open] summary {
+  margin-bottom: 16px;
+}
+
+.detail_content summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* 코드 블록 (``` 펜스 / 4칸 들여쓰기 모두 <pre><code>로 렌더링됨) */
+.detail_content pre {
+  margin: 20px 0;
+  padding: 16px 20px;
+  background-color: var(--footerBgColor);
+  color: var(--footerTextColor);
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 1.4rem;
+  line-height: 150%;
+}
+
+.detail_content code {
+  font-family: "SFMono-Regular", Consolas, monospace;
+}
+
+/* pre 안이 아닌 인라인 코드(`code`)는 칩 형태로 */
+.detail_content :not(pre) > code {
+  background-color: var(--aboveBgColor);
+  color: var(--primaryColor);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
