@@ -3,6 +3,8 @@ id: ticketingMaster
 title: Ticketing Master
 description: 대기열 과부화에 초점을 맞춘 티켓팅 플랫폼 프로젝트
 thumbnail: /images/ticketing_1.png
+date: 'September 10, 2026'
+featured: true
 ---
 ## 링크
 - GitHub: [티켓팅 마스터](https://github.com/MLP-Ticketing-Master/ticketingMaster)

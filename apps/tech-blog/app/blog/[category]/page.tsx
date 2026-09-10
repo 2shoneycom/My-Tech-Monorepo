@@ -10,6 +10,7 @@ import headerData from "../../../src/data/headerData";
 import categoryData from "../../../src/data/categoryData";
 import footerData from "../../../src/data/footerData";
 import { loadPostsByCategory } from "../../../src/api/posts";
+import { postsToContentItems } from "../../../src/api/content";
 
 interface PageProps {
   params: Promise<{ category: string }>;
@@ -23,7 +24,7 @@ async function SubCategory({ params }: PageProps) {
     (item) => item.id.toLowerCase() === category.toLowerCase()
   ) || heroContents[0];
 
-  const posts = loadPostsByCategory(category);
+  const posts = postsToContentItems(loadPostsByCategory(category));
 
   return (
     <div className={styles.top_container}>

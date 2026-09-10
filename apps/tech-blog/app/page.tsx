@@ -11,15 +11,21 @@ import PublicationsSection from './_components/PublicationsSection';
 import headerData from "../src/data/headerData";
 import footerData from "../src/data/footerData";
 import categoryData from "../src/data/categoryData";
-import { loadAllPosts } from "../src/api/posts";
+import { loadPostsByCategories } from "../src/api/posts";
+import { loadAllContent, loadFeaturedContent, postsToContentItems } from "../src/api/content";
+
+const BLOG_CATEGORIES = categoryData.researchAreaData.map((item) => item.id);
 
 function Home() {
-  const posts = loadAllPosts();
+  // 슬라이드 캐러셀 / Publications: 글 + 프로젝트를 합쳐 분야 상관없이 최신순
+  const content = loadAllContent();
 
-  // 히어로 슬라이드쇼 데이터 (최신순 5개)
-  const heroData = posts.slice(0, 5);
-  const fromtheblogData = posts.slice(0, 5);
-  const featuredNewsData = posts.slice(0, 5);
+  // 히어로 슬라이드쇼: 전체 콘텐츠 중 최신 5개
+  const heroData = content.slice(0, 5);
+  // From the blog: Blog 카테고리(Web/Algorithm/Developments)에 속한 글만, 최신 5개
+  const fromtheblogData = postsToContentItems(loadPostsByCategories(BLOG_CATEGORIES)).slice(0, 5);
+  // Featured news: frontmatter에 featured: true가 붙은 글/프로젝트만 최신순
+  const featuredNewsData = loadFeaturedContent().slice(0, 5);
 
   return (
     <div className={styles.top_container}>
@@ -37,7 +43,7 @@ function Home() {
         data={fromtheblogData}
       />
       <FeaturedNews data={featuredNewsData} />
-      <PublicationsSection posts={posts} />
+      <PublicationsSection posts={content} />
       <Footer
         logoImg={footerData.logoImg}
         socialItems={footerData.socialItems}

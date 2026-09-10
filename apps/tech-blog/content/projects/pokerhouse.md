@@ -3,6 +3,7 @@ id: pokerhouse
 title: Poker House
 description: 실시간 사용자 플레이가 반영되는 포커 게임 및 웹사이트 프로젝트
 thumbnail: /images/pokerhouse_1.png
+date: 'September 9, 2026'
 ---
 ## 소개
 

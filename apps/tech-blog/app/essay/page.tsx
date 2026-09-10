@@ -10,6 +10,7 @@ import headerData from "../../src/data/headerData";
 import categoryData from "../../src/data/categoryData";
 import footerData from "../../src/data/footerData";
 import { loadPostsByCategory } from "../../src/api/posts";
+import { postsToContentItems } from "../../src/api/content";
 
 const CATEGORY = "Essay";
 
@@ -19,7 +20,7 @@ function EssayPage() {
     (item) => item.id.toLowerCase() === CATEGORY.toLowerCase()
   ) || heroContents[0];
 
-  const posts = loadPostsByCategory(CATEGORY);
+  const posts = postsToContentItems(loadPostsByCategory(CATEGORY));
 
   return (
     <div className={styles.top_container}>

@@ -12,6 +12,7 @@ author: Sean Lee
 date: 'April 18, 2026'
 readDuration: 10
 thumbnail: /images/vite_2.png
+featured: true
 ---
 <p>리액트로 작업 중에 뜬금없이 이런 에러가 떴다. </p>
       <div class="Enhancement" data-align-center=>

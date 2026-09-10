@@ -10,6 +10,7 @@ author: Sean Lee
 date: 'June 1, 2026'
 readDuration: 10
 thumbnail: /images/zustand_vs_props_comparison.png
+featured: true
 ---
 <p>프론트엔드 코드 작성 시, 여러 컴포넌트에서 사용되어지는 데이터의 경우 전역적인 측면에서 다루어져야 할 때가 있다. React에서 전역 상태관리를 위한 라이브러리는 Zustand, Redux, Recoil, Jotai 등 여럿 있지만 이 글에서는 Zustand를 다룬다.</p>
       <h2>

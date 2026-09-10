@@ -17,6 +17,7 @@ export interface PostMeta {
   date: string;
   readDuration: number;
   thumbnail: string;
+  featured: boolean;
 }
 
 export interface Post extends PostMeta {
@@ -44,6 +45,7 @@ function toMeta(data: Record<string, unknown>): PostMeta {
     date: String(data.date),
     readDuration: Number(data.readDuration) || 0,
     thumbnail: String(data.thumbnail ?? ""),
+    featured: data.featured === true,
   };
 }
 
@@ -53,17 +55,18 @@ function getAllPostsMeta(): PostMeta[] {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
-// 구간별 게시글 로드 (목록 카드용 — 본문 렌더링은 하지 않아 가볍다)
-export function loadSlicedPosts(fromIdx: number, toIdx: number): PostMeta[] {
-  return getAllPostsMeta().slice(fromIdx, toIdx);
-}
-
 export function loadAllPosts(): PostMeta[] {
   return getAllPostsMeta();
 }
 
 export function loadPostsByCategory(category: string): PostMeta[] {
   return getAllPostsMeta().filter((post) => post.category.toLowerCase() === category.toLowerCase());
+}
+
+// 여러 카테고리에 걸친 게시글 로드 (예: "Blog" 메뉴에 속한 Web/Algorithm/Developments)
+export function loadPostsByCategories(categories: string[]): PostMeta[] {
+  const lowerCategories = categories.map((category) => category.toLowerCase());
+  return getAllPostsMeta().filter((post) => lowerCategories.includes(post.category.toLowerCase()));
 }
 
 // id로 게시글 가져오기 (상세 페이지용 — 본문까지 렌더링)

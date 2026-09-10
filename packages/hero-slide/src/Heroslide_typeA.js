@@ -72,7 +72,7 @@ function Heroslide_typeA({ data = [] }) {
                 <div className={styles.readmore_area}>
                   <Link
                     className={styles.readmore}
-                    href={`/post/${currentSlide.title}`}
+                    href={currentSlide.href}
                   >
                     Read more
                   </Link>

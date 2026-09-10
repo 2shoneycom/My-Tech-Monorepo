@@ -5,7 +5,7 @@ function PromoA({ item, detailsOn = true, descciptOn = true, categoryOn = true, 
   return (
     <div className={styles.PromoA}>
       <div className={`${styles.PromoA_media} ${mediaClassName || ''}`}>
-        <Link className={styles.Link} href={`/post/${item.title}`}>
+        <Link className={styles.Link} href={item.href}>
           <picture>
             <img className={styles.Image} data-image-size="promoMedium" alt={`${item.title} + _image`} src={item.thumbnail} />
           </picture>
@@ -13,7 +13,7 @@ function PromoA({ item, detailsOn = true, descciptOn = true, categoryOn = true, 
       </div>
       <div className={styles.PromoA_content}>
         <div className={`${styles.PromoA_title} ${titleClassName || ''}`}>
-          <Link className={styles.Link} href={`/post/${item.title}`}>
+          <Link className={styles.Link} href={item.href}>
             {item.title}
           </Link>
         </div>
@@ -38,7 +38,7 @@ function PromoA({ item, detailsOn = true, descciptOn = true, categoryOn = true, 
             null
         }
         {
-          categoryOn ?
+          categoryOn && item.category ?
             <div className={styles.PromoA_category}>
               <Link className={styles.Link} href={`/blog/${item.category.toLowerCase()}`}>
                 {item.category}

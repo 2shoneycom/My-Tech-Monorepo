@@ -11,6 +11,8 @@ export interface ProjectMeta {
   title: string;
   description: string;
   thumbnail: string;
+  date: string;
+  featured: boolean;
 }
 
 export interface Project extends ProjectMeta {
@@ -36,12 +38,16 @@ function toMeta(data: Record<string, unknown>): ProjectMeta {
     title: String(data.title),
     description: data.description ? String(data.description) : "",
     thumbnail: String(data.thumbnail ?? ""),
+    date: String(data.date ?? ""),
+    featured: data.featured === true,
   };
 }
 
 // 그리드 카드용 (본문 렌더링 없이 가볍게)
 export function loadAllProjects(): ProjectMeta[] {
-  return readAllRaw().map((project) => toMeta(project.data));
+  return readAllRaw()
+    .map((project) => toMeta(project.data))
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 // 상세 페이지용 (본문까지 렌더링)

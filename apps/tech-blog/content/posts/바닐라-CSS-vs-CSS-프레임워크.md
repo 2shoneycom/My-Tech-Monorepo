@@ -9,6 +9,7 @@ author: Sean Lee
 date: 'March 14, 2026'
 readDuration: 8
 thumbnail: /images/vanilacss_vs_framework_1.png
+featured: true
 ---
 <p>
         웹 페이지를 보기 좋게 만들기 위해 빠질 수 없는 것이 CSS인데 이전에는 CSS를 직접 작성해서 스타일링을 했어야 하는 반면에 현대적인 개발 방법론으로 CSS 프레임워크가 제시되었고 현재는 주류라고 할 수 있을 정도로 CSS 프레임워크는 많은 곳에 사용되고 있는 것 같다. Bootstrap, Tailwind CSS 등 모두 한 번쯤은 들어본 CSS 프레임워크이며 이 말은 곧 CSS 프레임워크가 그만큼 많은 사람들에게 사용되어지고 있다는 것을 의미하기도 한다.
