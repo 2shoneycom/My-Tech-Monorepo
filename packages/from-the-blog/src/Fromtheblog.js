@@ -4,7 +4,7 @@ import PromoA from '@sean/promo-a';
 
 function Fromtheblog({ viewAllLik, data = [] }) {
   return (
-    <div className={styles.top_container}>
+    <div id="from-the-blog" className={styles.top_container}>
       <div className={styles.fromtheblog_heading}>
         <div className={styles.fromtheblog_heading_body}>
           <svg className={styles.fromtheblog_heading_background_image} width="481" height="416" viewBox="0 0 481 416" xmlns="http://www.w3.org/2000/svg">

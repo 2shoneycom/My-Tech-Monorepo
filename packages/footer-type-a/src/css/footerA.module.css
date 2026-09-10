@@ -50,7 +50,15 @@
 .footer_logo img {
   display: inline-block;
   width: 171px;
-  height: 28px;
+  /* height를 고정값으로 박아두면 원본 비율(약 4.45:1)과 안 맞아서
+     가로로 찌그러져 보인다. auto로 비율을 그대로 따라가게 한다. */
+  height: auto;
+  /* 로고 원본이 불투명한 흰 배경 위 검정 글씨라, invert만 걸면
+     (흰→검정 변환된) 사각형이 남색 배경과 미묘하게 달라 티가 난다.
+     invert로 검정 배경 위 흰 글씨로 뒤집은 뒤 screen 블렌드로
+     그 검정 배경 부분을 실제 배경색에 녹여서 투명한 것처럼 보이게 한다. */
+  filter: invert(1);
+  mix-blend-mode: screen;
 }
 
 .footer_body .footer_columns {
@@ -66,8 +74,7 @@
 }
 
 .FooterNavigation {
-  column-count: 2;
-  column-gap: 40px;
+  /* 항목이 4개뿐이라 2열로 나누지 않고 세로 한 줄로 나열 */
 }
 
 .FooterNavigation_items_item .NavigationItem {

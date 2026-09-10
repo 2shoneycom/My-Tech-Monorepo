@@ -12,7 +12,7 @@ function Section_typeA({ data = [] }) {
   }
 
   return (
-    <div className={styles.top_container}>
+    <div id="research-areas" className={styles.top_container}>
       {/* 1. Title Area */}
       <div className={styles.ResearchArea_header_wrapper}>
         <h2 className={styles.ResearchArea_header}>Research areas</h2>

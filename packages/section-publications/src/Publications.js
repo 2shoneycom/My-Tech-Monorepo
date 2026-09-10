@@ -3,7 +3,7 @@ import styles from './css/publications.module.css';
 
 function Publications({ data = [], loadNext }) {
   return (
-    <section className={styles.top_contianer}>
+    <section id="publications" className={styles.top_contianer}>
       {/* ::before */}
       <div className={styles.header_wrapper}>
         <h2 className={styles.header}>Publications</h2>
